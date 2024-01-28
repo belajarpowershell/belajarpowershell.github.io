@@ -21,7 +21,7 @@ jobs:
       - run: pip install mkdocs-material==9.0.0
       - run: pip install pillow cairosvg
       - run: mkdocs gh-deploy --ignore-version --force  
-
+      - run: pip install mkdocs-codeinclude-plugin
       - run: pip3 install mkdocs-exclude
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
@@ -32,4 +32,4 @@ jobs:
           CONFIG_FILE: mkdocs.yml
           EXTRA_PACKAGES: build-base
           # GITHUB_DOMAIN: github.myenterprise.com
-          #REQUIREMENTS: folder/requirements.txt
+          REQUIREMENTS: requirements.txt
