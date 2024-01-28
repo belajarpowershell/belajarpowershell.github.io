@@ -26,9 +26,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CUSTOM_DOMAIN: belajarpowershell.com
-          CONFIG_FILE: folder/mkdocs.yml
+          CONFIG_FILE: docs/mkdocs.yml
           EXTRA_PACKAGES: build-base
-          REQUIREMENTS: folder/requirements.txt
+          REQUIREMENTS: docs/requirements.txt
 
   # Deployment job
   deploy:
