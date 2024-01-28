@@ -20,7 +20,7 @@ jobs:
           path: .cache
       - run: pip install mkdocs-material==1.5.3
       - run: pip install pillow cairosvg
-      - run: mkdocs gh-deploy --force 
+      - run: mkdocs gh-deploy --ignore-version --force  
 
       - run: pip3 install mkdocs-exclude
       - name: Deploy docs
