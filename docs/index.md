@@ -1,4 +1,4 @@
-## Sample
+## Sample docs
 
 One more, finally. Or not? :)
 
