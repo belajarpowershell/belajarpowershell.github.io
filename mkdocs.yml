@@ -39,8 +39,8 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-plugins:
-  - codeinclude
+# plugins:
+#   - codeinclude
 
 copyright: |
   &copy; 2024 <a href="https://github.com/belajarpowershell"  target="_blank" rel="noopener">Suresh Solomon</a>
