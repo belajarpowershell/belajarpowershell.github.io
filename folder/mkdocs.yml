@@ -1,1 +1,10 @@
-
+site_name: Test docs folder
+site_description: 'A docs test folder'
+site_author: 'Michael Hausenblas folder '
+docs_dir: docs/
+repo_name: 'mhausenblas/mkdocs-template'
+repo_url: 'https://github.com/mhausenblas/mkdocs-template'
+nav:
+    - Home: index.md
+theme:
+  name: 'material'
