@@ -1,7 +1,7 @@
 site_name: Kubernetes Lab setup
 site_url: https://belajarpowershell.github.io/kubernetes-lab/
-docs_dir: 'Document'
-custom_dir: themes/
+#docs_dir: 'Document'
+#custom_dir: themes/
 theme:
   name: readthedocs
   features:
