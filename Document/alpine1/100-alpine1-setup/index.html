@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/100-alpine1-setup/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Initial Alpine OS setup - alpine1 - Kubernetes Lab setup</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Initial Alpine OS setup - alpine1";
+        var mkdocs_page_input_path = "Document/alpine1/100-alpine1-setup.md";
+        var mkdocs_page_url = "/kubernetes-lab/Document/alpine1/100-alpine1-setup/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Kubernetes Lab setup
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Welcome to MkDocs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Document</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../scratch/">nfs for ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Introduction</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Introduction/000-ReadMeFirst/">000 ReadMeFirst</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Introduction/001-High-Level-node-setup/">Kubernetes lab setup - High level reference.</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Introduction/001-Hyper-V-Host-Specification/">Hyper-V-Host-Specification</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Introduction/001-Hyper-V-VM-creation/">Hyper-V Virtual Machine Powershell script</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Pre Requisites</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Pre%20Requisites/002-vi-basics/">002 vi basics</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Virtual Machine Deployment</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Virtual%20Machine%20Deployment/113-New-single-VM-setup-Ubuntu-autoinstall/">alpine1 setup and configuration.</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Virtual%20Machine%20Deployment/114-generate-user-data-multipleVM/">114 generate user data multipleVM</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Virtual%20Machine%20Deployment/114-generate-user-data-reference/">114 generate user data reference</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Alpine1</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Initial Alpine OS setup - alpine1</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#key-information">Key information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hyper-v-configuration-for-reference">Hyper-V configuration for reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#alpine-install-iso-first-boot">Alpine install ISO first boot</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#disable-ipv6-on-alpine">Disable IPv6 on Alpine</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#install-alpine">Install Alpine</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#installation-begins">Installation begins.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setup-completed">Setup completed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#connect-via-ssh">Connect via ssh</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#alpine-os-install-completed">Alpine OS install completed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#next-step">Next step</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../101-DHCP-server/">Install and Configure DHCP - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../102-setup-router/">Configure as a Router  -alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../103-setup-dns/">Configure DNS server - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../104-setup-nginx/">Install and Configure nginx - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../105-nfs/">Install and Configure nfs- alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../106-tftp/">Install and Configure tftpd - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../107-cloud-init/">Install and Configure cloud-init - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../108-DHCP-for-PXE/">update DHCP options to provide PXE boot information to clients. - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../109-setup-boot-files-part1/">Part 1 of 4  Setup boot files for PXELINUX and OS boot- alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../110-setup-boot-files-part2-PXE/">Part 2 of 4  Setup boot files for PXELINUX - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../111-setup-boot-files-part3-OS/">Part 3 of 4 Setup OS Boot files - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../112-setup-boot-files-part4-pxelinux.cfg/">Part 4 of 4 Configure the boot menu pxelinux.cfg/default - alpine1</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Draft</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../draft/200-setup-alpine-LB/">Setup Alpine Load balancer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../draft/9108-alpine1-setup-pxe-bootmenu%20copy/">alpine1 setup and configuration.</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../draft/9108-alpine1-setup-pxe-bootmenu/">alpine1 setup and configuration.</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../draft/999-alpine1-DHCP-set-hostname/">alpine1 setup and configuration.</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../draft/argo-cd/">Argo cd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../draft/kubernetes-upgrade/">Kubernetes upgrade</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Ad login</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../draft/ad-login/001-k3s-setup/">001 k3s setup</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../draft/ad-login/azure-ad-setup/">Azure ad setup</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../draft/ad-login/entra-app-registration-aks-cli-kubectl/">Entra app registration aks cli kubectl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../draft/ad-login/kubectl-kubelogin/">Kubectl kubelogin</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../draft/ad-login/kubectl-login-ad/">Kubectl login ad</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../draft/ad-login/test-ad-authentication/">Test ad authentication</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../draft/ad-login/windows-install-az-cli/">Windows install az cli</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">K3s deployment</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../k3s-deployment/200-Ansible-setup/">200 Ansible setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../k3s-deployment/201-k3s-setup/">201 k3s setup</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Kubernetes Lab setup</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Document</li>
+          <li class="breadcrumb-item">Alpine1</li>
+      <li class="breadcrumb-item active">Initial Alpine OS setup - alpine1</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="initial-alpine-os-setup-alpine1">Initial Alpine OS setup - <code>alpine1</code></h1>
+<h2 id="key-information">Key information</h2>
+<pre><code>Alpine Default login
+login : root
+password : blank
+</code></pre>
+<h2 id="hyper-v-configuration-for-reference">Hyper-V configuration for reference</h2>
+<p><img alt="alt text" src="./screenshots/Alpine1-screenshots/Hyper-V-alpine1-config-overview.png" /></p>
+<h2 id="alpine-install-iso-first-boot">Alpine install ISO first boot</h2>
+<p><img alt="alt text" src="./screenshots/Alpine1-screenshots/Alpine-boot-from-alpine-install-iso.png" /></p>
+<h2 id="disable-ipv6-on-alpine">Disable IPv6 on Alpine</h2>
+<p>In my setup IPv6 was not working.When downloading files IPv6 was used and delayed/errored out.
+If you have issues with IPv6, do disable before proceeding. </p>
+<p>Edit the /etc/sysctl.conf</p>
+<pre><code>vi /etc/sysctl.conf
+# Manualy type in the followingf
+# press [i] to be in insert /edit mode
+
+net.ipv6.conf.all.disable_ipv6 = 1
+# to save and exit following key press
+# [esc] :x! [enter]
+
+# reload the configuration
+sysctl -p
+</code></pre>
+<h2 id="install-alpine">Install Alpine</h2>
+<p>After logging on at the prompt type </p>
+<pre><code>setup-alpine
+</code></pre>
+<p>You will be asked a series of questions . I have listed my selection.</p>
+<pre><code>Keyboard Layout : [us]
+Keyboard variant : [us]
+Hostname : [alpine1]
+Network :
+eth0: [dhcp]  # Internet connection
+eth1: [192.168.100.1/24]
+gateway: [none]
+password : [123]
+DNS Servers :
+Timezone :[Singpore]
+Proxy :[none]
+ntp: default [chrony]  #if it takes long to complete , make sure ipv6 is disabled
+Mirror :[f] # Detect and add fastest mirror
+setup user : [no]
+Which ssh server? [openssh]
+allow root ssh login: [yes]
+Allow ssh login : [yes]
+Which disks would you like to use : [sda]
+Disk Mode How would you like to use it ? [sys]
+Erase the above disks and continue? [y]
+</code></pre>
+<h2 id="installation-begins">Installation begins.</h2>
+<p>Once the installation is completed you will see the notice to reboot.
+Before rebooting, change the boot sequence in Hyper-V for alpine1 to be Hard Drive first.</p>
+<p>This will ensure the reboot will be to the Hard Disk.
+<img alt="alt text" src="./screenshots/Alpine1-screenshots/Hyper-V-alpine2-boot-sequence-change-after-alpine-setup-completed.png" />
+On the apline1 Hyper-V console.
+the prompt will display press [enter]</p>
+<pre><code>installation complete type reboot [enter]
+</code></pre>
+<h2 id="setup-completed">Setup completed</h2>
+<p>These are the credentials for newly installed alpine1 . </p>
+<pre><code>login: root
+pass: 123
+#in this lab all passwords will be set with 123
+</code></pre>
+<p>This screen will appear , take note of the login prompt <strong>'alpine1'</strong>. Indicating the installation is completed.</p>
+<p><img alt="alt text" src="./screenshots/Alpine1-screenshots/vmconnect_odjAAmfYDN.png" /></p>
+<h2 id="connect-via-ssh">Connect via ssh</h2>
+<p>If you don't already know the Hyper-V console is not able to perform copy and paste operations. Via a terminal connection copy and paste functions make it easier to paste commands , especially the long ones.
+At this time the Hyper-V host does not have an IP in the <code>Private Subnet 192.168.100.0/24</code> . We cannot test the SSH at this time.
+We can test this when DHCP is setup later on.</p>
+<h2 id="alpine-os-install-completed">Alpine OS install completed</h2>
+<h2 id="next-step">Next step</h2>
+<p>We will proceed to setup alpine1 as a DHCP server </p>
+<p>Please continue with </p>
+<h1 id="101-alpine1-setup-dhcp-server"><a href="./101-alpine1-setup-DHCP-server.md">101-alpine1-setup-DHCP-server</a></h1>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../Virtual%20Machine%20Deployment/114-generate-user-data-reference/" class="btn btn-neutral float-left" title="114 generate user data reference"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../101-DHCP-server/" class="btn btn-neutral float-right" title="Install and Configure DHCP - alpine1">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>&copy; 2024 <a href="https://github.com/belajarpowershell"  target="_blank" rel="noopener">Suresh Solomon</a></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../Virtual%20Machine%20Deployment/114-generate-user-data-reference/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../101-DHCP-server/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
