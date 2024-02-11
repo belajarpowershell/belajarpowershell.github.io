@@ -22,8 +22,8 @@ jobs:
       - name: Install MkDocs
         run: pip install mkdocs-table-reader-plugin
         
-      # - name: Build MkDocs Site
-      #   run: mkdocs build
+      - name: Build MkDocs Site
+        run: mkdocs build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
