@@ -57,22 +57,22 @@ markdown_extensions:
 plugins:
   - search
   - table-reader
-  - codeinclude    
+#   - codeinclude    
 
-language: en
-palette:
-  - scheme: default
-    toggle:
-      icon: material/toggle-switch-off-outline 
-      name: Switch to dark mode
-    primary: blue
-    accent: purple 
-  - scheme: slate 
-    toggle:
-      icon: material/toggle-switch
-      name: Switch to light mode    
-    primary: teal
-    accent: lime
+# language: en
+# palette:
+#   - scheme: default
+#     toggle:
+#       icon: material/toggle-switch-off-outline 
+#       name: Switch to dark mode
+#     primary: blue
+#     accent: purple 
+#   - scheme: slate 
+#     toggle:
+#       icon: material/toggle-switch
+#       name: Switch to light mode    
+#     primary: teal
+#     accent: lime
 
 nav:
   - Get started:
