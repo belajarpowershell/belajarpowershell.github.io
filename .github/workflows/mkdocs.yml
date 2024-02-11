@@ -19,8 +19,8 @@ jobs:
       - name: Install mkdocs-material
         run: pip install mkdocs-material
       
-      # - name: Install mkdocs-table-reader-plugin
-      #   run: pip install mkdocs-table-reader-plugin
+      - name: Install mkdocs-table-reader-plugin
+        run: pip install mkdocs-table-reader-plugin
         
       - name: Build MkDocs Site
         run: mkdocs build
