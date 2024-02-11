@@ -52,7 +52,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install mkdocs-material
-          run: pip install mkdocs-table-reader-plugin
+          pip install mkdocs-table-reader-plugin
 
       # - name: Install Insiders build
       #   if: github.event.repository.fork == false
