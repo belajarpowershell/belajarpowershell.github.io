@@ -1,3 +1,5 @@
+[![Deploy MkDocs to GitHub Pages](https://github.com/belajarpowershell/belajarpowershell.github.io/actions/workflows/mkdocs.yml/badge.svg?branch=main)](https://github.com/belajarpowershell/belajarpowershell.github.io/actions/workflows/mkdocs.yml)
+
 # Kubernetes Lab Setup
 
 This repository contains the relevant steps to setup
