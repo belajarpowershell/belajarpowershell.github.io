@@ -39,7 +39,7 @@ theme:
   #   - toc.follow
 
 markdown_extensions:
-  - md_in_html
+  #- md_in_html
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -59,65 +59,65 @@ plugins:
   - table-reader
 #   - codeinclude    
 
-# language: en
-# palette:
-#   - scheme: default
-#     toggle:
-#       icon: material/toggle-switch-off-outline 
-#       name: Switch to dark mode
-#     primary: blue
-#     accent: purple 
-#   - scheme: slate 
-#     toggle:
-#       icon: material/toggle-switch
-#       name: Switch to light mode    
-#     primary: teal
-#     accent: lime
+language: en
+palette:
+  - scheme: default
+    toggle:
+      icon: material/toggle-switch-off-outline 
+      name: Switch to dark mode
+    primary: blue
+    accent: purple 
+  - scheme: slate 
+    toggle:
+      icon: material/toggle-switch
+      name: Switch to light mode    
+    primary: teal
+    accent: lime
 
 nav:
   - Get started:
       - index.md
       - ReadMe.md
   - Prerequisites:
-      - kubernetes-lab-setup\000-Prerequisites/001-Hyper-V-Host-Specification.md
-      - kubernetes-lab-setup\000-Prerequisites/002-High-Level-node-setup.md
-      - kubernetes-lab-setup\000-Prerequisites/002-vi-basics.md
-      - kubernetes-lab-setup\000-Prerequisites/003-clone-repository.md
-      - kubernetes-lab-setup\000-Prerequisites/004-Hyper-V-VM-creation.md
+      - kubernetes-lab-setup/000-Prerequisites/001-Hyper-V-Host-Specification.md
+      - kubernetes-lab-setup/000-Prerequisites/002-High-Level-node-setup.md
+      - kubernetes-lab-setup/000-Prerequisites/002-vi-basics.md
+      - kubernetes-lab-setup/000-Prerequisites/003-clone-repository.md
+      - kubernetes-lab-setup/000-Prerequisites/004-Hyper-V-VM-creation.md
   - Management Server alpine1 setup:
-      - kubernetes-lab-setup\100-alpine1\100-alpine1-setup.md
-      #- kubernetes-lab-setup\100-alpine1\1000-Clone-repository (copy).md
-      - kubernetes-lab-setup\100-alpine1\101-ssh-to-alpine1.md
-      - kubernetes-lab-setup\100-alpine1\102-Clone-repository.md
-      #- kubernetes-lab-setup\100-alpine1\103-setup-using-ansible-manual.md
-      - kubernetes-lab-setup\100-alpine1\103-setup-using-ansible.md
+      - kubernetes-lab-setup/100-alpine1/100-alpine1-setup.md
+      #- kubernetes-lab-setup/100-alpine1/1000-Clone-repository (copy).md
+      - kubernetes-lab-setup/100-alpine1/101-ssh-to-alpine1.md
+      - kubernetes-lab-setup/100-alpine1/102-Clone-repository.md
+      #- kubernetes-lab-setup/100-alpine1/103-setup-using-ansible-manual.md
+      - kubernetes-lab-setup/100-alpine1/103-setup-using-ansible.md
       - Setup services Manual Steps:
-                - kubernetes-lab-setup\100-alpine1\manual-steps\101-DHCP-server.md
-                - kubernetes-lab-setup\100-alpine1\manual-steps\102-setup-router.md
-                - kubernetes-lab-setup\100-alpine1\manual-steps\103-setup-dns.md
-                - kubernetes-lab-setup\100-alpine1\manual-steps\104-setup-nginx.md
-                - kubernetes-lab-setup\100-alpine1\manual-steps\105-nfs.md
-                - kubernetes-lab-setup\100-alpine1\manual-steps\106-tftp.md
-                - kubernetes-lab-setup\100-alpine1\manual-steps\107-cloud-init.md
-                - kubernetes-lab-setup\100-alpine1\manual-steps\108-DHCP-for-PXE.md
-                - kubernetes-lab-setup\100-alpine1\manual-steps\109-setup-boot-files-part1-PXE.md
-                - kubernetes-lab-setup\100-alpine1\manual-steps\110-setup-boot-files-part2-OS.md
-                - kubernetes-lab-setup\100-alpine1\manual-steps\111-setup-boot-files-part3-pxelinux.cfg.md
-                #- kubernetes-lab-setup\100-alpine1\manual-steps\112-New-single-VM-setup-Ubuntu-autoinstall.md
-                - kubernetes-lab-setup\100-alpine1\manual-steps\113-generate-user-data-multipleVM.md
-      #- kubernetes-lab-setup\100-alpine1\104-Validation.md
-      - kubernetes-lab-setup\100-alpine1\113-Install-Ubuntu.md
+                - kubernetes-lab-setup/100-alpine1/manual-steps/101-DHCP-server.md
+                - kubernetes-lab-setup/100-alpine1/manual-steps/102-setup-router.md
+                - kubernetes-lab-setup/100-alpine1/manual-steps/103-setup-dns.md
+                - kubernetes-lab-setup/100-alpine1/manual-steps/104-setup-nginx.md
+                - kubernetes-lab-setup/100-alpine1/manual-steps/105-nfs.md
+                - kubernetes-lab-setup/100-alpine1/manual-steps/106-tftp.md
+                - kubernetes-lab-setup/100-alpine1/manual-steps/107-cloud-init.md
+                - kubernetes-lab-setup/100-alpine1/manual-steps/108-DHCP-for-PXE.md
+                - kubernetes-lab-setup/100-alpine1/manual-steps/109-setup-boot-files-part1-PXE.md
+                - kubernetes-lab-setup/100-alpine1/manual-steps/110-setup-boot-files-part2-OS.md
+                - kubernetes-lab-setup/100-alpine1/manual-steps/111-setup-boot-files-part3-pxelinux.cfg.md
+                #- kubernetes-lab-setup/100-alpine1/manual-steps/112-New-single-VM-setup-Ubuntu-autoinstall.md
+                - kubernetes-lab-setup/100-alpine1/manual-steps/113-generate-user-data-multipleVM.md
+      #- kubernetes-lab-setup/100-alpine1/104-Validation.md
+      - kubernetes-lab-setup/100-alpine1/113-Install-Ubuntu.md
   - Lightweight Kubernetes Installation:
-      - kubernetes-lab-setup\200-kubernetes\200-ReadMe.md
-      - kubernetes-lab-setup\200-kubernetes\201-SSH-keys-setup.md
-      - kubernetes-lab-setup\200-kubernetes\202-Setup-k3s-with-Ansible.md
+      - kubernetes-lab-setup/200-kubernetes/200-ReadMe.md
+      - kubernetes-lab-setup/200-kubernetes/201-SSH-keys-setup.md
+      - kubernetes-lab-setup/200-kubernetes/202-Setup-k3s-with-Ansible.md
       - Manual Steps:
-        - kubernetes-lab-setup\200-kubernetes\204-k3s-setup-complete.md
-        - kubernetes-lab-setup\200-kubernetes\manual-steps\202-Ansible-inventory.md
-        - kubernetes-lab-setup\200-kubernetes\manual-steps\203-Setup-k3s-with-Ansible.md
-        # - 900-Explainers\PXELINUX.md
-        # - 900-Explainers\generate-user-data-multipleVM.md
-        # - 900-Explainers\generate-user-data-reference.md
+        - kubernetes-lab-setup/200-kubernetes/204-k3s-setup-complete.md
+        - kubernetes-lab-setup/200-kubernetes/manual-steps/202-Ansible-inventory.md
+        - kubernetes-lab-setup/200-kubernetes/manual-steps/203-Setup-k3s-with-Ansible.md
+        # - 900-Explainers/PXELINUX.md
+        # - 900-Explainers/generate-user-data-multipleVM.md
+        # - 900-Explainers/generate-user-data-reference.md
 
 
 copyright: |
