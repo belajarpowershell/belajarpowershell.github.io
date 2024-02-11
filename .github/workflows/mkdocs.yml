@@ -1,0 +1,35 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Adjust this to your main branch name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install MkDocs
+        run: pip install mkdocs
+      
+      - name: Install MkDocs
+        run: pip install mkdocs-material
+      
+      - name: Install MkDocs
+        run: pip install mkdocs-table-reader-plugin
+        
+      - name: Build MkDocs Site
+        run: mkdocs build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+        #   personal_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./site  # Adjust this to your MkDocs build output directory
+            user_name: GitHub Actions
+            user_email: actions@users.noreply.github.com
