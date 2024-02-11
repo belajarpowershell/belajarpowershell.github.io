@@ -1275,8 +1275,8 @@
                   
 
 
-<h1 id="ssh">SSH</h1>
-<h2 id="steps-to-ssh">Steps to ssh</h2>
+<h1 id="ssh">SSH<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h1>
+<h2 id="steps-to-ssh">Steps to ssh<a class="headerlink" href="#steps-to-ssh" title="Permanent link">&para;</a></h2>
 <p>In order to ssh to <code>alpine1</code> the Hyper V Host will need an IP address from the subnet <code>192.168.100.0/24</code></p>
 <blockquote>
 <p>Do not use DHCP to assign the IP address , as the gateway is also assigned to my Hyper-V host Network Interface this will cause network connectivity issues. As there will be 2 gateways configured.</p>
@@ -1289,7 +1289,7 @@ So better to set the IP address manually then obtain via DHCP.</p>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>New-NetIPAddress -InterfaceIndex $ifindex -IPAddress 192.168.100.2 -PrefixLength 24
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Get-DnsClient -InterfaceIndex $ifindex | Set-DnsClientServerAddress -ServerAddresses (&quot;192.168.100.1&quot;)
 </span></code></pre></div>
-<h4 id="validate">Validate</h4>
+<h4 id="validate">Validate<a class="headerlink" href="#validate" title="Permanent link">&para;</a></h4>
 <p>Run this command on Windows Terminal to check if an IP has been assigned</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>get-netipaddress -InterfaceIndex (Get-NetAdapter | Where-Object { $_.Name -like &quot;*192.168.100.0*&quot; }).InterfaceIndex
 </span></code></pre></div>
@@ -1302,7 +1302,7 @@ So better to set the IP address manually then obtain via DHCP.</p>
 <li>If that is working, then review the IP address ranges assigned to ensure they are correct and check for typos in the IP address.</li>
 <li>Ensure only one gateway IP address is assigned. Having multiple gateways will introduce connectivity issues.</li>
 </ul>
-<h2 id="how-to-ssh-to-alpine1">How to SSH to <code>alpine1</code> ?</h2>
+<h2 id="how-to-ssh-to-alpine1">How to SSH to <code>alpine1</code> ?<a class="headerlink" href="#how-to-ssh-to-alpine1" title="Permanent link">&para;</a></h2>
 <p>Once you can ping <code>alpine1</code> you can now setup a ssh session.</p>
 <p>Use a terminal client. Putty is a good terminal to use.
 In Windows 11 as I have Terminal client installed I will be using this lab.
@@ -1315,7 +1315,7 @@ I will perform further configuration from the Windows Terminal as I will be able
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Password : `123` # if the proposed Password was used
 </span></code></pre></div>
 <p><img alt="alt text" src="../../screenshots/Alpine1-screenshots/WindowsTerminal_ssh-alpine1.png" /></p>
-<h2 id="you-are-now-connected">You are now connected!</h2>
+<h2 id="you-are-now-connected">You are now connected!<a class="headerlink" href="#you-are-now-connected" title="Permanent link">&para;</a></h2>
 
 
 

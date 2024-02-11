@@ -1202,14 +1202,14 @@
                   
 
 
-<h1 id="ubuntu-autoinstall-on-single-vm">Ubuntu Autoinstall on single VM</h1>
+<h1 id="ubuntu-autoinstall-on-single-vm">Ubuntu Autoinstall on single VM<a class="headerlink" href="#ubuntu-autoinstall-on-single-vm" title="Permanent link">&para;</a></h1>
 <p>One other aspect I was looking at is to automate all the servers to access the configuration files that is reference with the hostname,IP,gateway and Disk config.
 This way every time I have to rebuild the lab, it will be quicker. </p>
 <p>I understand from the Ubuntu <a href="https://ubuntu.com/server/docs/install/autoinstall">Automated Server installation</a> that there is a change from version 20.04 a new method is implemented. As such most of the information gathered are from the Ubuntu forums.</p>
-<h3 id="these-are-some-references-i-used-to-prepare-the-autoinstall-configuration">These are some references I used to prepare the autoinstall configuration</h3>
+<h3 id="these-are-some-references-i-used-to-prepare-the-autoinstall-configuration">These are some references I used to prepare the autoinstall configuration<a class="headerlink" href="#these-are-some-references-i-used-to-prepare-the-autoinstall-configuration" title="Permanent link">&para;</a></h3>
 <p><a href="https://ubuntu.com/server/docs/install/autoinstall-quickstart">autoinstall-quickstart</a></p>
 <p><a href="https://askubuntu.com/questions/1290624/fetch-autoinstall-based-on-mac">fetch-autoinstall-based-on-mac</a></p>
-<h4 id="lets-get-to-the-details">Lets get to the details</h4>
+<h4 id="lets-get-to-the-details">Lets get to the details<a class="headerlink" href="#lets-get-to-the-details" title="Permanent link">&para;</a></h4>
 <p>The autoinstall  requires <code>user-data</code> , <code>vendor-data</code> and <code>meta-data</code>. The <code>meta-data</code> and , <code>vendor-data</code>  are blank files. 
 <code>user-data</code> however must be populated with some valid content.
 In the file <code>/srv/tftp/efi64/pxelinux.cfg/default</code>, the append row below looks for the <code>user-data</code> and <code>meta-data</code> we need to ensure these file exists is referenced here.</p>
@@ -1352,17 +1352,17 @@ It is best to generate one to store the relevant configurations and then customi
 <p>Generate the crypted password using the command below. The result will change with every run as there is salting present in the code.You don't have to do this if you are extracting the <code>user-data</code> from an existing installation.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkpasswd --method=sha-512 123 # 123 is the password in this example
 </span></code></pre></div>
-<h2 id="validate">Validate</h2>
+<h2 id="validate">Validate<a class="headerlink" href="#validate" title="Permanent link">&para;</a></h2>
 <p>Validate <code>user-data</code> using the command below.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cloud-init schema --config-file user-data
 </span></code></pre></div>
 <p>We now have all the files in place for a machine to start up and autoinstall ubuntu.</p>
 <p>With the setup in place you can now start the Virtual Machine <code>master1</code>, the network boot will present the Menu, select the option <code>ubuntu-iso-local</code> the VM will boot up with and the installation will complete without manual input.</p>
-<h4 id="video-overview-on-the-ubuntu-autoinstall-process">Video overview on the Ubuntu Autoinstall process .</h4>
+<h4 id="video-overview-on-the-ubuntu-autoinstall-process">Video overview on the Ubuntu Autoinstall process .<a class="headerlink" href="#video-overview-on-the-ubuntu-autoinstall-process" title="Permanent link">&para;</a></h4>
 <p>//</p>
 <p>This a video covering the initial boot, Ubuntu installation and the booting to the newly installed Ubuntu.
 <a href="https://clipchamp.com/watch/5HU0H7YUsnU">Autoinstall-Ubuntu-master1</a></p>
-<h3 id="lessons-learnt">Lessons Learnt.</h3>
+<h3 id="lessons-learnt">Lessons Learnt.<a class="headerlink" href="#lessons-learnt" title="Permanent link">&para;</a></h3>
 <p>As I performed the configuration, I faced some issues , and the following had configuration errors mostly. i.e. wrong IP, typos etc.</p>
 <ul>
 <li>

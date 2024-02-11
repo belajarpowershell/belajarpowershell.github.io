@@ -1245,12 +1245,12 @@
                   
 
 
-<h1 id="ansible-playbook-steps">Ansible Playbook steps</h1>
+<h1 id="ansible-playbook-steps">Ansible Playbook steps<a class="headerlink" href="#ansible-playbook-steps" title="Permanent link">&para;</a></h1>
 <p>Setting up a single node k3s is very quick , takes about 2-3 minutes to setup. Setting up a k3s High Availability cluster is more complex.</p>
 <p>Having the goal of getting a Kubernetes Lab setup quickly, the best option I had was to use Ansible.  I have playbooks to setup one k3s High Availability Clusters and a single node k3s. Managing the k3s is best to be remote, to accommodate that, made the <code>alpine1</code> the kubectl management server. </p>
 <p>The most challenging task I faced when I started with kubernetes was the KUBECONFIG . Once I had this working learning the other tasks were that much easier. The Playbook and bash scripts make this easier for you.  </p>
 <p>The following describes the relevant files in the <code>ansible</code> folder. That will help with the setup of the 2 k3s clusters mentioned.</p>
-<h4 id="ansible-folder-content">Ansible folder content</h4>
+<h4 id="ansible-folder-content">Ansible folder content<a class="headerlink" href="#ansible-folder-content" title="Permanent link">&para;</a></h4>
 <p>Folder <code>ansible</code></p>
 <p>Prepare / run this first </p>
 <p>hosts.ini</p>
@@ -1358,13 +1358,13 @@
 <li>In this example the file stores the various setup commands to install `k3s' for the different roles. </li>
 </ul>
 </blockquote>
-<h4 id="kubeconfig-on-alpine1">Kubeconfig on <code>alpine1</code></h4>
+<h4 id="kubeconfig-on-alpine1">Kubeconfig on <code>alpine1</code><a class="headerlink" href="#kubeconfig-on-alpine1" title="Permanent link">&para;</a></h4>
 <p>Once the scripts <code>02z-k3s-copy-kubeconfig.yml</code> and <code>03z-k3s-copy-kubeconfig-single.yml</code> are completed. The playbook copy the remote kubeconfig files from the remote servers . The files will be stored in <code>/root/.kube/clusters</code>  folder. </p>
 <p>We now need to have the KUBECONFIG setup on <code>alpine</code> . The following will merge all <code>*.yaml</code> files in <code>/root/.kube/clusters</code></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> export KUBECONFIG=$(for YAML in $(find ${HOME}/.kube/clusters -name &#39;*.yaml&#39;) ; do echo -n &quot;:${YAML}&quot;; done)
 </span></code></pre></div>
 <p>This is not permanent . Do check how you can make this permanent after logout from the session. </p>
-<h4 id="kubectl-basic-commands"><code>kubectl</code> basic commands</h4>
+<h4 id="kubectl-basic-commands"><code>kubectl</code> basic commands<a class="headerlink" href="#kubectl-basic-commands" title="Permanent link">&para;</a></h4>
 <p>Running some basic <code>kubectl</code> commands.</p>
 <p>List of contexts. </p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>(1) kubectl config get-contexts.

@@ -1277,7 +1277,7 @@
                   
 
 
-<h1 id="configure-pxe-boot-menu">Configure PXE Boot menu</h1>
+<h1 id="configure-pxe-boot-menu">Configure PXE Boot menu<a class="headerlink" href="#configure-pxe-boot-menu" title="Permanent link">&para;</a></h1>
 <p>Configure the boot menu <code>pxelinux.cfg/default</code>
 The final piece is to prepare the boot menu to load and present a selection that will install the Ubuntu OS.</p>
 <p>This file is already with the configuration below.</p>
@@ -1315,9 +1315,9 @@ The final piece is to prepare the boot menu to load and present a selection that
 </span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    LOCALBOOT 0
 </span></code></pre></div>
 With the above configuration in place, a remote server in the <code>Private 192.168.100.0/24</code> network that has Network boot configured will be able to boot successfully. </p>
-<h3 id="what-happens-next">What happens next?</h3>
+<h3 id="what-happens-next">What happens next?<a class="headerlink" href="#what-happens-next" title="Permanent link">&para;</a></h3>
 <p>When the remote client boots, it will get the DHCP options for the <code>tftp</code> server. The <code>syslinux.efi</code> will load and then present the boot menu. Choosing either option will present with the Ubuntu install window. The usual process to setup can now continue.</p>
-<h3 id="lessons-learnt">Lessons Learnt</h3>
+<h3 id="lessons-learnt">Lessons Learnt<a class="headerlink" href="#lessons-learnt" title="Permanent link">&para;</a></h3>
 <p>As I performed the configuration, I faced some issues , and the following had configuration errors mostly. i.e. wrong IP, typos etc.
  - Check DHCP 
  Check the logs to see if the IP is being assigned. If it does not it could be a network related configuration.
@@ -1326,10 +1326,10 @@ With the above configuration in place, a remote server in the <code>Private 192.
  - ensure VM has minimum 4GB of memory to load the Ubuntu OS setup. This is for the ISO to be extracted to memory.
 - URL path incorrect.
 - the selection of <code>ubuntu-iso-local`` is actualy looking at for the ISO to be mounted locally. The files are not loaded from</code>nfs`. </p>
-<h2 id="next-step">Next step</h2>
+<h2 id="next-step">Next step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
 <p>The PXE boot to install Ubuntu is now complete. 
 If you are looking to automate the entries for the Ubuntu installation, the next step will review the relevant points.</p>
-<h3 id="113-new-vm-setup-ubuntu-autoinstall">113-New-VM-setup-Ubuntu-autoinstall</h3>
+<h3 id="113-new-vm-setup-ubuntu-autoinstall">113-New-VM-setup-Ubuntu-autoinstall<a class="headerlink" href="#113-new-vm-setup-ubuntu-autoinstall" title="Permanent link">&para;</a></h3>
 
 
 

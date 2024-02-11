@@ -1154,7 +1154,7 @@
 
   <h1>generate user data multipleVM</h1>
 
-<h2 id="generate-user-data-mac-address-file">Generate <code>user-data-mac-address</code> file.</h2>
+<h2 id="generate-user-data-mac-address-file">Generate <code>user-data-mac-address</code> file.<a class="headerlink" href="#generate-user-data-mac-address-file" title="Permanent link">&para;</a></h2>
 <p>For a Kubernetes cluster we will need multiple Virtual Machines. This will require multiple <code>user-data-mac-address</code> files to be created. Here I use PowerShell to generate the files.</p>
 <p>To setup each Hyper-V VM with the Ubuntu Operating system we need to generate unique <code>user-data</code> files. The following script generates the script based on a working <code>user-data</code> file. This working file was extracted by installing Ubuntu from scratch with the relevant configurations. This file can be obtained from <code>/var/log/installer/autoinstall-user-data</code>. This file is renamed as <code>user-data-template.yaml</code> in this script. The script then creates new files based on the mac-address with the hostname and IP address updated.  </p>
 <div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c"># Get the directory containing the script</span>

@@ -1227,7 +1227,7 @@
                   
 
 
-<h1 id="ssh-keys">SSH keys</h1>
+<h1 id="ssh-keys">SSH keys<a class="headerlink" href="#ssh-keys" title="Permanent link">&para;</a></h1>
 <p>When accessing Ubuntu ( or any Linux) servers, you will need to enter the username and password for every SSH session. When performing automated tasks, this can be a challenge.  SSH keys  can be used to improve this process. For our next tool Ansible ssh keys are required.</p>
 <p>How SSH keys work?</p>
 <p>The concept of SSH keys involve private and public keys. </p>
@@ -1256,7 +1256,7 @@
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>SHA256:Od1Wxp2mpTJ5YnLD7NShCJc+Y41YIlNLn2enjGZIxzU root@alpine1
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>The key&#39;s randomart image is:
 </span></code></pre></div>
-<h4 id="copy-ssh-keys-to-remote-servers">Copy ssh keys to remote servers.</h4>
+<h4 id="copy-ssh-keys-to-remote-servers">Copy ssh keys to remote servers.<a class="headerlink" href="#copy-ssh-keys-to-remote-servers" title="Permanent link">&para;</a></h4>
 <p>Once the key pair is generated, copy the public key to the remote Ubuntu server</p>
 <p>The following script copies the ssh public key to the remote servers  <code>master1 master2 master3 worker1 worker2 worker3 xsinglenode</code></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>#!/bin/sh
@@ -1275,7 +1275,7 @@
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    ssh-copy-id -i &quot;$ssh_key&quot; &quot;ubuntu@$server&quot;  
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>done
 </span></code></pre></div>
-<h3 id="passphrase">Passphrase</h3>
+<h3 id="passphrase">Passphrase<a class="headerlink" href="#passphrase" title="Permanent link">&para;</a></h3>
 <p>When connecting using ssh keys, the prompt for the ssh key passphrase will be prompted for each ssh session. You can use the ssh-agent to store this passphrase</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># start ssh-agent. 
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>eval $(ssh-agent) 

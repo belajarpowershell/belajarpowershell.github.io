@@ -1325,12 +1325,12 @@
                   
 
 
-<h1 id="setup-ubuntu-os-boot-files">Setup Ubuntu OS Boot files</h1>
+<h1 id="setup-ubuntu-os-boot-files">Setup Ubuntu OS Boot files<a class="headerlink" href="#setup-ubuntu-os-boot-files" title="Permanent link">&para;</a></h1>
 <p>In this section we will perform 2 tasks 
 - Download and mount the ISO Live CD.
 - Extract the <code>vmlinuz</code> and <code>initrd</code> files from the LiveCD to the tftp folder</p>
-<h2 id="step-1-download-and-mount-the-iso">Step 1 Download and Mount the ISO.</h2>
-<h2 id="_1"></h2>
+<h2 id="step-1-download-and-mount-the-iso">Step 1 Download and Mount the ISO.<a class="headerlink" href="#step-1-download-and-mount-the-iso" title="Permanent link">&para;</a></h2>
+<h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># lets host the ISO in the folder /iso
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mkdir -p /srv/tftp/iso
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a># Download the ISO
@@ -1345,7 +1345,7 @@
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>ls /srv/isoubuntu
 </span></code></pre></div>
 <p><img alt="alt text" src="../../../screenshots/Alpine1-screenshots/mount-ubuntu-iso.png" /></p>
-<h4 id="step-2-extract-vmlinuz-and-initrd">Step 2 Extract <code>vmlinuz</code> and <code>initrd</code></h4>
+<h4 id="step-2-extract-vmlinuz-and-initrd">Step 2 Extract <code>vmlinuz</code> and <code>initrd</code><a class="headerlink" href="#step-2-extract-vmlinuz-and-initrd" title="Permanent link">&para;</a></h4>
 <p>Run the commands below to extract the boot files.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>#create ubuntu folder to store the boot files.
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a># this way we can have boot files for multple distros if required.
@@ -1363,8 +1363,8 @@ The boot files will be served via http. Do validate if this folder and content i
 <p><img alt="alt text" src="../../../screenshots/Alpine1-screenshots/browser-list-isoubuntu-content.png" />
 Click <code>tftp</code> and <code>iso</code> to list the ISO LiveCD.</p>
 <p><img alt="alt text" src="../../../screenshots/Alpine1-screenshots/browser-iso-ubuntu.png" /></p>
-<h2 id="step-2-extract-vmlinuz-and-initrd_1">Step 2 Extract <code>vmlinuz</code> and <code>initrd</code></h2>
-<h3 id="boot-files">Boot files.</h3>
+<h2 id="step-2-extract-vmlinuz-and-initrd_1">Step 2 Extract <code>vmlinuz</code> and <code>initrd</code><a class="headerlink" href="#step-2-extract-vmlinuz-and-initrd_1" title="Permanent link">&para;</a></h2>
+<h3 id="boot-files">Boot files.<a class="headerlink" href="#boot-files" title="Permanent link">&para;</a></h3>
 <p>When booting a Server with Linux, there are 2 files required.
 <code>vmlinuz</code> and <code>initrd</code> at times the version is part of the name depending on Linux flavors</p>
 <p>In this example boot files are retrieved from <code>ubuntu-20.04.6-live-server-amd64.iso</code></p>
@@ -1383,7 +1383,7 @@ The boot files will be served via http. Do validate if this folder and content i
 <p>## Next step</p>
 <p>At this stage we have made all the required files available for the boot process.
 Next we will put in the final piece for the setup to function.</p>
-<h3 id="111-setup-boot-files-part3-pxelinuxcfg">111-setup-boot-files-part3-pxelinux.cfg</h3>
+<h3 id="111-setup-boot-files-part3-pxelinuxcfg">111-setup-boot-files-part3-pxelinux.cfg<a class="headerlink" href="#111-setup-boot-files-part3-pxelinuxcfg" title="Permanent link">&para;</a></h3>
 
 
 

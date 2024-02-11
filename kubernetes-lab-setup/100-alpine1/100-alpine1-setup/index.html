@@ -1317,17 +1317,17 @@
                   
 
 
-<h1 id="install-alpine-os-on-vm-alpine1">Install Alpine OS on VM <code>alpine1</code></h1>
-<h2 id="key-information">Key information</h2>
+<h1 id="install-alpine-os-on-vm-alpine1">Install Alpine OS on VM <code>alpine1</code><a class="headerlink" href="#install-alpine-os-on-vm-alpine1" title="Permanent link">&para;</a></h1>
+<h2 id="key-information">Key information<a class="headerlink" href="#key-information" title="Permanent link">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Alpine Default login
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>login : root
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>password : blank
 </span></code></pre></div>
-<h2 id="hyper-v-configuration-for-reference">Hyper-V configuration for reference</h2>
+<h2 id="hyper-v-configuration-for-reference">Hyper-V configuration for reference<a class="headerlink" href="#hyper-v-configuration-for-reference" title="Permanent link">&para;</a></h2>
 <p><img alt="alt text" src="../../screenshots/Alpine1-screenshots/Hyper-V-alpine1-config-overview.png" /></p>
-<h2 id="alpine-install-iso-first-boot">Alpine install ISO first boot</h2>
+<h2 id="alpine-install-iso-first-boot">Alpine install ISO first boot<a class="headerlink" href="#alpine-install-iso-first-boot" title="Permanent link">&para;</a></h2>
 <p><img alt="alt text" src="../../screenshots/Alpine1-screenshots/Alpine-boot-from-alpine-install-iso.png" /></p>
-<h2 id="disable-ipv6-on-alpine">Disable IPv6 on Alpine</h2>
+<h2 id="disable-ipv6-on-alpine">Disable IPv6 on Alpine<a class="headerlink" href="#disable-ipv6-on-alpine" title="Permanent link">&para;</a></h2>
 <p>In my setup IPv6 was not working.When downloading files IPv6 was used and delayed/errored out.
 If you have issues with IPv6, do disable before proceeding. </p>
 <p>Edit the /etc/sysctl.conf</p>
@@ -1342,7 +1342,7 @@ If you have issues with IPv6, do disable before proceeding. </p>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a># reload the configuration
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>sysctl -p
 </span></code></pre></div>
-<h2 id="install-alpine">Install Alpine</h2>
+<h2 id="install-alpine">Install Alpine<a class="headerlink" href="#install-alpine" title="Permanent link">&para;</a></h2>
 <p>After logging on at the prompt type 
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>setup-alpine
 </span></code></pre></div>
@@ -1368,7 +1368,7 @@ You will be asked a series of questions . I have listed my selection.
 </span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>Disk Mode How would you like to use it ? [sys]
 </span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>Erase the above disks and continue? [y]
 </span></code></pre></div></p>
-<h2 id="installation-begins">Installation begins.</h2>
+<h2 id="installation-begins">Installation begins.<a class="headerlink" href="#installation-begins" title="Permanent link">&para;</a></h2>
 <p>Once the installation is completed you will see the notice to reboot.
 Before rebooting, change the boot sequence in Hyper-V for alpine1 to be Hard Drive first.</p>
 <p>This will ensure the reboot will be to the Hard Disk.
@@ -1377,7 +1377,7 @@ On the apline1 Hyper-V console.
 the prompt will display press [enter]
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>installation complete type reboot [enter]
 </span></code></pre></div></p>
-<h2 id="setup-completed">Setup completed</h2>
+<h2 id="setup-completed">Setup completed<a class="headerlink" href="#setup-completed" title="Permanent link">&para;</a></h2>
 <p>These are the credentials for newly installed alpine1 . 
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>login: root
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>pass: 123
@@ -1385,11 +1385,11 @@ the prompt will display press [enter]
 </span></code></pre></div>
 This screen will appear , take note of the login prompt <strong>'alpine1'</strong>. Indicating the installation is completed.</p>
 <p><img alt="alt text" src="../../screenshots/Alpine1-screenshots/vmconnect_odjAAmfYDN.png" /></p>
-<h1 id="alpine-os-install-completed">Alpine OS install completed</h1>
-<h2 id="next-step">Next step</h2>
+<h1 id="alpine-os-install-completed">Alpine OS install completed<a class="headerlink" href="#alpine-os-install-completed" title="Permanent link">&para;</a></h1>
+<h2 id="next-step">Next step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
 <p>We will proceed to setup alpine1 as a DHCP server </p>
 <p>Please continue with </p>
-<h3 id="101-alpine1-setup-dhcp-server">101-alpine1-setup-DHCP-server</h3>
+<h3 id="101-alpine1-setup-dhcp-server">101-alpine1-setup-DHCP-server<a class="headerlink" href="#101-alpine1-setup-dhcp-server" title="Permanent link">&para;</a></h3>
 
 
 

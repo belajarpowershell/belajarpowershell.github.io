@@ -1209,7 +1209,7 @@
                   
 
 
-<h1 id="high-level-design">High Level Design</h1>
+<h1 id="high-level-design">High Level Design<a class="headerlink" href="#high-level-design" title="Permanent link">&para;</a></h1>
 <table>
 <thead>
 <tr>
@@ -1277,7 +1277,7 @@
 <p><code>master1/2/3</code> This is the Kubernetes Control plane. Acting as a High Availability setup that allows for 1 Master node failure at any time.</p>
 <p><code>worker1/2/3</code> The Kubernetes workloads are deployed on these nodes. 3 nodes allow for some load balancing in the event nodes need to be taken down for maintenance purposes.</p>
 <p><code>metallb</code> The Ingress requires a set of IP addresses to cater for incoming traffic to the Kubernetes cluster. These IP ranges are reserved for this functionality.</p>
-<h2 id="high-level-network-diagram">High Level Network Diagram</h2>
+<h2 id="high-level-network-diagram">High Level Network Diagram<a class="headerlink" href="#high-level-network-diagram" title="Permanent link">&para;</a></h2>
 <p>HYPER-V Network connectivity
 All the VM's will use <code>alpine1</code> as the gateway to the internet.
 Apart from the gateway function, <code>alpine1</code> also acts as performs several other functions. </p>

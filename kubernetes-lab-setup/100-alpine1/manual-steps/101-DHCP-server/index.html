@@ -1283,7 +1283,7 @@
                   
 
 
-<h1 id="install-and-configure-dhcp">Install and Configure DHCP</h1>
+<h1 id="install-and-configure-dhcp">Install and Configure DHCP<a class="headerlink" href="#install-and-configure-dhcp" title="Permanent link">&para;</a></h1>
 <p>For the initial setup we will have the basic DHCP configuration.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#install dhcpd
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>apk add dhcp
@@ -1310,7 +1310,7 @@ In the subsequent steps we will review how to setup alpine1 as a Router.</p>
 We want to have alpine1 to function as DNS server and also forward DNS request not resolved locally.
 The steps to configure alpine1 as DNS server is reviewed later.</p>
 </blockquote>
-<h2 id="restart-the-dhcp-deamon">Restart the DHCP deamon</h2>
+<h2 id="restart-the-dhcp-deamon">Restart the DHCP deamon<a class="headerlink" href="#restart-the-dhcp-deamon" title="Permanent link">&para;</a></h2>
 <p>To refresh the updated configuration restart the DHCP services.
 Any errors in configuration will appear at this point.
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># set dhcpd to start at boot
@@ -1328,8 +1328,8 @@ These to files will be key for your troubleshooting.
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cat /etc/dhcp/dhcpd.conf
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>cat /var/lib/dhcp/dhcpd.leases
 </span></code></pre></div></p>
-<h2 id="dhcp-setup-is-complete-for-alpine1-server">DHCP Setup is complete  for alpine1 server .</h2>
-<h2 id="steps-to-ssh">Steps to ssh.</h2>
+<h2 id="dhcp-setup-is-complete-for-alpine1-server">DHCP Setup is complete  for alpine1 server .<a class="headerlink" href="#dhcp-setup-is-complete-for-alpine1-server" title="Permanent link">&para;</a></h2>
+<h2 id="steps-to-ssh">Steps to ssh.<a class="headerlink" href="#steps-to-ssh" title="Permanent link">&para;</a></h2>
 <p>If using DHCP, the gateway is also assigned to my Hyper-V host Network Interface.
 This caused some network issues where my connection to the internet kept timing out. When I set the IP address without the Gateway the network issues were no longer present. 
 So better to set the IP address manualy then obtain via DHCP.</p>
@@ -1346,13 +1346,13 @@ Validate</p>
 <p>Troubleshooting.
 - If that is working, then review the IP address ranges assigned to ensure they are correct and check for typos in the IP address.
 - Ensure only one gateway IP address is assigned. Having multiple gateways will introduce connectivity issues.</p>
-<h2 id="how-to-identify-the-ip-address-on-a-linux-machine">How to identify the IP address on a linux machine?</h2>
+<h2 id="how-to-identify-the-ip-address-on-a-linux-machine">How to identify the IP address on a linux machine?<a class="headerlink" href="#how-to-identify-the-ip-address-on-a-linux-machine" title="Permanent link">&para;</a></h2>
 <p>At the prompt type.
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>  ip a 
 </span></code></pre></div>
 Here is an example 
 <img alt="alt text" src="../../../screenshots/Alpine1-screenshots/alpine-get-ip-address.png" /></p>
-<h2 id="how-to-ssh-to-a-linux-machine">How to SSH to a Linux Machine?</h2>
+<h2 id="how-to-ssh-to-a-linux-machine">How to SSH to a Linux Machine?<a class="headerlink" href="#how-to-ssh-to-a-linux-machine" title="Permanent link">&para;</a></h2>
 <p>Use a terminal client.Putty is a good terminal to use.
 In Windows 11 as I have Terminal client installed I will be using this lab.
 But any terminal program can be used.</p>
@@ -1363,12 +1363,12 @@ I will peform further configuration from the Windows Terminal as I will be able 
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Password : `123` # if the proposed Password was used
 </span></code></pre></div>
 <img alt="alt text" src="../../../screenshots/Alpine1-screenshots/WindowsTerminal_ssh-alpine1.png" /></p>
-<h1 id="dhcp-is-installed-and-ssh-to-alpine1-server-established">DHCP is installed and SSH to <code>alpine1</code> server established.</h1>
-<h2 id="next-step">Next step</h2>
+<h1 id="dhcp-is-installed-and-ssh-to-alpine1-server-established">DHCP is installed and SSH to <code>alpine1</code> server established.<a class="headerlink" href="#dhcp-is-installed-and-ssh-to-alpine1-server-established" title="Permanent link">&para;</a></h1>
+<h2 id="next-step">Next step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
 <p>We will proceed with the router installation. </p>
 <p>The validation for DHCP and Internet on the private network will be tested at a later stage.</p>
 <p>Please continue with </p>
-<h3 id="102-alpine1-setup-route">102-alpine1-setup-route</h3>
+<h3 id="102-alpine1-setup-route">102-alpine1-setup-route<a class="headerlink" href="#102-alpine1-setup-route" title="Permanent link">&para;</a></h3>
 
 
 

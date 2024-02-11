@@ -1226,38 +1226,38 @@
                   
 
 
-<h1 id="setup-services-manual-steps">Setup services Manual Steps</h1>
+<h1 id="setup-services-manual-steps">Setup services Manual Steps<a class="headerlink" href="#setup-services-manual-steps" title="Permanent link">&para;</a></h1>
 <p>Setting up the various services for automation is time consuming and possible prone to errors.</p>
 <p>Using Ansible, I was able to reduce the time it too deploy the services required. </p>
 <p>Here we use the playbook with the several playbooks as below. </p>
 <p>In <code>103-setup-using-ansible</code> the steps are combined and implemented in a single command. The individual steps will be helpful for troubleshooting or if there is a need to change selected configuration.</p>
-<h4 id="ansible-playbook-execution">Ansible Playbook execution</h4>
+<h4 id="ansible-playbook-execution">Ansible Playbook execution<a class="headerlink" href="#ansible-playbook-execution" title="Permanent link">&para;</a></h4>
 <p>Change directory to <code>/srv/ansible/playbook-alpine1</code></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd /srv/ansible/playbook-alpine1
 </span></code></pre></div>
 <p>Execute the playbook run from <code>/srv/ansible/playbook-alpine1</code></p>
-<h4 id="101-dhcp-server-setup">101 DHCP server Setup</h4>
+<h4 id="101-dhcp-server-setup">101 DHCP server Setup<a class="headerlink" href="#101-dhcp-server-setup" title="Permanent link">&para;</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ansible-playbook 101-DHCP-server.yaml
 </span></code></pre></div>
-<h4 id="102-setup-alpine1-as-a-router">102 Setup <code>alpine1</code> as a router</h4>
+<h4 id="102-setup-alpine1-as-a-router">102 Setup <code>alpine1</code> as a router<a class="headerlink" href="#102-setup-alpine1-as-a-router" title="Permanent link">&para;</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ansible-playbook 102-setup-router.yaml
 </span></code></pre></div>
-<h4 id="103-dns-setup">103 DNS Setup</h4>
+<h4 id="103-dns-setup">103 DNS Setup<a class="headerlink" href="#103-dns-setup" title="Permanent link">&para;</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ansible-playbook 103-setup-DNS.yaml
 </span></code></pre></div>
-<h4 id="104-nginx-setup">104 Nginx Setup</h4>
+<h4 id="104-nginx-setup">104 Nginx Setup<a class="headerlink" href="#104-nginx-setup" title="Permanent link">&para;</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ansible-playbook 104-setup-nginx.yaml
 </span></code></pre></div>
-<h4 id="105-nfs-setup">105 NFS  Setup</h4>
+<h4 id="105-nfs-setup">105 NFS  Setup<a class="headerlink" href="#105-nfs-setup" title="Permanent link">&para;</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ansible-playbook 105-nfs.yaml
 </span></code></pre></div>
-<h4 id="106-cloud-init-setup">106 Cloud-init Setup</h4>
+<h4 id="106-cloud-init-setup">106 Cloud-init Setup<a class="headerlink" href="#106-cloud-init-setup" title="Permanent link">&para;</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ansible-playbook 106-cloud-init.yaml
 </span></code></pre></div>
-<h4 id="108-dhcp-for-pxe-setup">108 DHCP for PXE Setup</h4>
+<h4 id="108-dhcp-for-pxe-setup">108 DHCP for PXE Setup<a class="headerlink" href="#108-dhcp-for-pxe-setup" title="Permanent link">&para;</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ansible-playbook 108-DHCP-for-PXE.yaml
 </span></code></pre></div>
-<h4 id="110-boot-file-setup">110 Boot file setup.</h4>
+<h4 id="110-boot-file-setup">110 Boot file setup.<a class="headerlink" href="#110-boot-file-setup" title="Permanent link">&para;</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ansible-playbook 110-setup-boot-files-part2-OS.yaml
 </span></code></pre></div>
 

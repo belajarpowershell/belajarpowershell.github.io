@@ -1323,18 +1323,18 @@
                   
 
 
-<h1 id="ubuntu-installation">Ubuntu Installation</h1>
+<h1 id="ubuntu-installation">Ubuntu Installation<a class="headerlink" href="#ubuntu-installation" title="Permanent link">&para;</a></h1>
 <p>Step <code>103-setup-using-ansible</code> would have setup <code>alpine1</code> to perform the functions required for the Ubuntu Auto install steps.</p>
 <p>We now have some manual tasks to create the <code>user-data-mac-address</code> file for each of the Virtual Machines created ( excluding <code>alpine1</code>)</p>
-<h3 id="step-1">Step 1</h3>
-<h4 id="start-and-stop-all-the-virtual-machines-created">Start and stop all the Virtual Machines created.</h4>
+<h3 id="step-1">Step 1<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h3>
+<h4 id="start-and-stop-all-the-virtual-machines-created">Start and stop all the Virtual Machines created.<a class="headerlink" href="#start-and-stop-all-the-virtual-machines-created" title="Permanent link">&para;</a></h4>
 <p>For the following step, the Virtual Machines created must be started once to generate the mac-address.</p>
 <p>From PowerShell ISE  open <code>G:\kubernetes-lab\srv\scripts\hyper-v_Host\get-hyperv-start-stopVM.ps1</code></p>
 <p>Click on the <code>Green Play</code> button, this will execute the script.</p>
 <p>This will start and then stop all the Virtual Machines ( Load⁎ , master⁎ , worker⁎  , ⁎single⁎  ). Ensure the Virtual Machine names are not changed. </p>
 <p>You can also Start and Stop from the Hyper-V Console. </p>
-<h3 id="step-2">Step 2</h3>
-<h4 id="generate-user-data-mac-address-file">Generate user-data-mac-address file.</h4>
+<h3 id="step-2">Step 2<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h3>
+<h4 id="generate-user-data-mac-address-file">Generate user-data-mac-address file.<a class="headerlink" href="#generate-user-data-mac-address-file" title="Permanent link">&para;</a></h4>
 <p>For a Kubernetes cluster we will need multiple Virtual Machines. This will require multiple <code>user-data-mac-address</code> files to be created. Here I use PowerShell to generate the files.</p>
 <p>From PowerShell ISE  open <code>G:\kubernetes-lab\srv\scripts\hyper-v_Host\get-hyperv-VM-mac.ps1</code></p>
 <p>Click on the <code>Green Play</code> button, this will execute the script.</p>
@@ -1344,14 +1344,14 @@
 <p>This is from the following code</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>APPEND netboot=nfs boot=casper root=/dev/nfs nfsroot=192.168.100.1:/srv/isoubuntu autoinstall 
 </span></code></pre></div>
-<h4 id="copy-autoinstall-files-to-alpine1">Copy autoinstall files to <code>alpine1</code></h4>
+<h4 id="copy-autoinstall-files-to-alpine1">Copy autoinstall files to <code>alpine1</code><a class="headerlink" href="#copy-autoinstall-files-to-alpine1" title="Permanent link">&para;</a></h4>
 <p>Using <a href="https://winscp.net/eng/download.php">WinSCP</a> copy the files created to the folder  <code>/srv/autoinstall/</code> on the <code>alpine1</code> server. The duplicate file with the node name is workaround to show the hostname of the specific file. </p>
 <p><img alt="114-02-wsftp-cp-autoinstall" src="./../screenshots\113-02-wsftp-cp-autoinstall.png" /></p>
 <p>From step <code>104-setup-nginx</code>( refer to manual steps), the folder /srv/ was exposed to be visible from <code>http://192.168.100.1/</code>. All folders created in <code>/srv/</code> will be listed via the browser.</p>
 <p>Validate by browsing <code>http://192.168.100.1/</code></p>
 <p><img alt="114-03-list-autoinstall-in-browser" src="./../screenshots\114-03-list-autoinstall-in-browser.png" /></p>
 <p>// To update Video of Script generation and the Ubuntu setup.</p>
-<h4 id="lessons-learnt">Lessons Learnt</h4>
+<h4 id="lessons-learnt">Lessons Learnt<a class="headerlink" href="#lessons-learnt" title="Permanent link">&para;</a></h4>
 <ul>
 <li>The MAC addresses for a newly created Hyper-V Virtual Machine is not generated until its started at least once. </li>
 <li>the <code>meta-data</code> and<code>vendor-data</code> while empty must exist.</li>

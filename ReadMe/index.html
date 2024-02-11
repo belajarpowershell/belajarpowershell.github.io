@@ -1153,7 +1153,7 @@
                   
 
 
-<h1 id="kubernetes-lab-setup">Kubernetes Lab Setup</h1>
+<h1 id="kubernetes-lab-setup">Kubernetes Lab Setup<a class="headerlink" href="#kubernetes-lab-setup" title="Permanent link">&para;</a></h1>
 <p>This repository contains the relevant steps to setup</p>
 <ul>
 <li>1 Alpine OS Management Server</li>
@@ -1161,7 +1161,7 @@
 <li>1 High Available Cluster Lightweight Kubernetes ( k3s)</li>
 </ul>
 <p>The objective of this lab is to be able to rebuild the clusters very quickly as this is for testing services and applications. </p>
-<p>Files required for the setup can be extracted from the git repository  https://github.com/belajarpowershell/kubernetes-lab</p>
+<p>Files required for the setup can be extracted from the git repository  <a href="https://github.com/belajarpowershell/kubernetes-lab">https://github.com/belajarpowershell/kubernetes-lab</a></p>
 <p>The guide is designed such that , someone with basic knowledge of Ubuntu , can setup the lab succesfully. Basic knowledge of Ubuntu only requires connecting, navigating and editing files .</p>
 <p>Follow the sequence number in the files , this will ensure that all the required services are setup.</p>
 <p>Here is a high level on the tasks required .</p>
@@ -1173,14 +1173,14 @@
 <li>Connect to <code>alpine1</code> via ssh (step <code>101-ssh-to-alpine1</code> )</li>
 <li>Clone the repository on <code>alpine1</code> ( step 102-Clone-repository)</li>
 <li>Setup on <code>alpine1</code> the various services required . (step <code>103-setup-using-ansible</code>)</li>
-<li>Install Ubuntu OS on the remaining Virtual Machines ( loadbalancer,master1/2/3,worker1/2/3,singlenode) (step<code>113-generate-user-data-multipleVM</code> )</li>
+<li>Install Ubuntu OS on the remaining Virtual Machines ( loadbalancer,master&frac12;/3,worker&frac12;/3,singlenode) (step<code>113-generate-user-data-multipleVM</code> )</li>
 </ul>
 <p>Lightweight <a href="https://k3s.io/">k3s</a>  setup <code>200-kubernetes</code></p>
 <ul>
 <li>Summary of steps (step  <code>200ReadMe</code>)</li>
 <li>Create and setup for ssh-key for authentication (step <code>201-SSH-keys-setup</code>)</li>
 <li>Setup Ansible </li>
-<li>Install the all dependencies and <a href="https://k3s.io/">k3s</a> on loadbalancer,master1/2/3,worker1/2/3,singlenode (step <code>202-Setup-k3s-with-Ansible</code>)</li>
+<li>Install the all dependencies and <a href="https://k3s.io/">k3s</a> on loadbalancer,master&frac12;/3,worker&frac12;/3,singlenode (step <code>202-Setup-k3s-with-Ansible</code>)</li>
 </ul>
 
 

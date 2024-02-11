@@ -1289,8 +1289,8 @@
                   
 
 
-<h1 id="configure-dns-server">Configure DNS server</h1>
-<h2 id="install-bind-dns-server-and-tools-dig-and-nslookup-on-alpine1">Install bind ( DNS server) and tools dig and nslookup on alpine1.</h2>
+<h1 id="configure-dns-server">Configure DNS server<a class="headerlink" href="#configure-dns-server" title="Permanent link">&para;</a></h1>
+<h2 id="install-bind-dns-server-and-tools-dig-and-nslookup-on-alpine1">Install bind ( DNS server) and tools dig and nslookup on alpine1.<a class="headerlink" href="#install-bind-dns-server-and-tools-dig-and-nslookup-on-alpine1" title="Permanent link">&para;</a></h2>
 <p>DNS resolves Names to IP addresses. Kubetnetes will need the DNS to be closer to a production setup. Hence the requirement. This service can be skipped , but then all the connectivity will be via IP alone.</p>
 <p>In this lab we will setup <code>bind</code> as the DNS server application.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#install bind
@@ -1401,11 +1401,11 @@ To ensure <code>alpine1</code> resolves the FQDN's correctly ensure the followin
 </span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>#disables readonly
 </span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>chattr -i /etc/resolv.conf 
 </span></code></pre></div>
-<h3 id="setup-alpine1-server-dns-is-complete">Setup <code>alpine1</code> server DNS is complete.</h3>
-<h2 id="next-step">Next step</h2>
+<h3 id="setup-alpine1-server-dns-is-complete">Setup <code>alpine1</code> server DNS is complete.<a class="headerlink" href="#setup-alpine1-server-dns-is-complete" title="Permanent link">&para;</a></h3>
+<h2 id="next-step">Next step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
 <p>We will proceed with the nginx server installation </p>
 <p>Please continue with </p>
-<h3 id="104-alpine1-setup-nginx">104-alpine1-setup-nginx</h3>
+<h3 id="104-alpine1-setup-nginx">104-alpine1-setup-nginx<a class="headerlink" href="#104-alpine1-setup-nginx" title="Permanent link">&para;</a></h3>
 
 
 
