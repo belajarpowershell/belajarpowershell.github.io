@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/101-DHCP-server/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Install and Configure DHCP - alpine1 - Kubernetes Lab setup</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Install and Configure DHCP - alpine1";
+        var mkdocs_page_input_path = "Document/alpine1/101-DHCP-server.md";
+        var mkdocs_page_url = "/kubernetes-lab/Document/alpine1/101-DHCP-server/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Kubernetes Lab setup
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Welcome to MkDocs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Document</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../scratch/">nfs for ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Introduction</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Introduction/000-ReadMeFirst/">000 ReadMeFirst</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Introduction/001-High-Level-node-setup/">Kubernetes lab setup - High level reference.</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Introduction/001-Hyper-V-Host-Specification/">Hyper-V-Host-Specification</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Introduction/001-Hyper-V-VM-creation/">Hyper-V Virtual Machine Powershell script</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Pre Requisites</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Pre%20Requisites/002-vi-basics/">002 vi basics</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Virtual Machine Deployment</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Virtual%20Machine%20Deployment/113-New-single-VM-setup-Ubuntu-autoinstall/">alpine1 setup and configuration.</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Virtual%20Machine%20Deployment/114-generate-user-data-multipleVM/">114 generate user data multipleVM</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Virtual%20Machine%20Deployment/114-generate-user-data-reference/">114 generate user data reference</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Alpine1</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../100-alpine1-setup/">Initial Alpine OS setup - alpine1</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Install and Configure DHCP - alpine1</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#restart-the-dhcp-deamon">Restart the DHCP deamon</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dhcp-setup-is-complete-for-alpine1-server">DHCP Setup is complete  for alpine1 server .</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#steps-to-ssh">Steps to ssh.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-identify-the-ip-address-on-a-linux-machine">How to identify the IP address on a linux machine?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-ssh-to-a-linux-machine">How to SSH to a Linux Machine?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dhcp-is-installed-and-ssh-to-alpine1-server-established">DHCP is installed and SSH to alpine1 server established.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#next-step">Next step</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../102-setup-router/">Configure as a Router  -alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../103-setup-dns/">Configure DNS server - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../104-setup-nginx/">Install and Configure nginx - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../105-nfs/">Install and Configure nfs- alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../106-tftp/">Install and Configure tftpd - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../107-cloud-init/">Install and Configure cloud-init - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../108-DHCP-for-PXE/">update DHCP options to provide PXE boot information to clients. - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../109-setup-boot-files-part1/">Part 1 of 4  Setup boot files for PXELINUX and OS boot- alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../110-setup-boot-files-part2-PXE/">Part 2 of 4  Setup boot files for PXELINUX - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../111-setup-boot-files-part3-OS/">Part 3 of 4 Setup OS Boot files - alpine1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../112-setup-boot-files-part4-pxelinux.cfg/">Part 4 of 4 Configure the boot menu pxelinux.cfg/default - alpine1</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Draft</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../draft/200-setup-alpine-LB/">Setup Alpine Load balancer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../draft/9108-alpine1-setup-pxe-bootmenu%20copy/">alpine1 setup and configuration.</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../draft/9108-alpine1-setup-pxe-bootmenu/">alpine1 setup and configuration.</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../draft/999-alpine1-DHCP-set-hostname/">alpine1 setup and configuration.</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../draft/argo-cd/">Argo cd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../draft/kubernetes-upgrade/">Kubernetes upgrade</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Ad login</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../draft/ad-login/001-k3s-setup/">001 k3s setup</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../draft/ad-login/azure-ad-setup/">Azure ad setup</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../draft/ad-login/entra-app-registration-aks-cli-kubectl/">Entra app registration aks cli kubectl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../draft/ad-login/kubectl-kubelogin/">Kubectl kubelogin</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../draft/ad-login/kubectl-login-ad/">Kubectl login ad</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../draft/ad-login/test-ad-authentication/">Test ad authentication</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../draft/ad-login/windows-install-az-cli/">Windows install az cli</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">K3s deployment</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../k3s-deployment/200-Ansible-setup/">200 Ansible setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../k3s-deployment/201-k3s-setup/">201 k3s setup</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Kubernetes Lab setup</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Document</li>
+          <li class="breadcrumb-item">Alpine1</li>
+      <li class="breadcrumb-item active">Install and Configure DHCP - alpine1</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="install-and-configure-dhcp-alpine1">Install and Configure DHCP - <code>alpine1</code></h1>
+<p>For the initial setup we will have the basic DHCP configuration.</p>
+<pre><code>#install dhcpd
+apk add dhcp
+</code></pre>
+<p>Update the file /etc/dhcp/dhcpd.conf with the content below.</p>
+<p>Use VI editor to edit ( or any other you are familiar with)</p>
+<pre><code># using console you cannot copy paste, must type in manually
+# create config file 
+touch /etc/dhcp/dhcpd.conf
+# edit config file
+vi /etc/dhcp/dhcpd.conf
+
+subnet 192.168.100.0 netmask 255.255.255.0 {
+  range 192.168.100.100 192.168.100.200;
+  option domain-name-servers 192.168.100.1;
+  option routers 192.168.100.1;
+}
+[esc] :x[enter] to save and exit
+</code></pre>
+<blockquote>
+<p>routers : The routers IP usually is the WIFI or WAN router IP. In this lab setup we want emulate an office network setup.
+In the subsequent steps we will review how to setup alpine1 as a Router.</p>
+<p>domain-name-servers : in this setup we want to resolve some internal hostnames  that cannot be resolved by public DNS servers.
+We want to have alpine1 to function as DNS server and also forward DNS request not resolved locally.
+The steps to configure alpine1 as DNS server is reviewed later.</p>
+</blockquote>
+<h2 id="restart-the-dhcp-deamon">Restart the DHCP deamon</h2>
+<p>To refresh the updated configuration restart the DHCP services.
+Any errors in configuration will appear at this point.</p>
+<pre><code># set dhcpd to start at boot
+rc-update add dhcpd default
+
+# start the dhcpd service.
+rc-service dhcpd start
+
+# Check the dhcpd service status.
+rc-service dhcpd status
+
+</code></pre>
+<p>DHCP logs
+Later you may need to check if the IP addresses are assigned etc.
+These to files will be key for your troubleshooting.</p>
+<pre><code>cat /etc/dhcp/dhcpd.conf
+cat /var/lib/dhcp/dhcpd.leases
+</code></pre>
+<h2 id="dhcp-setup-is-complete-for-alpine1-server">DHCP Setup is complete  for alpine1 server .</h2>
+<h2 id="steps-to-ssh">Steps to ssh.</h2>
+<p>If using DHCP, the gateway is also assigned to my Hyper-V host nic.
+THis caused some network issues where my connection to the internet kept timing out. When I set the IP address without the Gateway the network issues were no longer present. 
+So better to set the IP address manualy then obtain via DHCP.</p>
+<p>Paste the following Powershell code int Windows Terminal as Administrator.</p>
+<pre><code>$ifindex=(Get-NetAdapter | Where-Object { $_.Name -like &quot;*192.168.100.0*&quot; }).InterfaceIndex
+New-NetIPAddress -InterfaceIndex $ifindex -IPAddress 192.168.100.2 -PrefixLength 24
+Get-DnsClient -InterfaceIndex $ifindex | Set-DnsClientServerAddress -ServerAddresses (&quot;192.168.100.1&quot;)
+
+</code></pre>
+<p>Validate</p>
+<p>Run this command on Windows Terminal to check if an IP has been assigned</p>
+<pre><code>
+get-netipaddress -InterfaceIndex (Get-NetAdapter | Where-Object { $_.Name -like &quot;*192.168.100.0*&quot; }).InterfaceIndex
+</code></pre>
+<p><img alt="alt text" src="./screenshots/Alpine1-screenshots/WindowsTerminal_checkIP.png" /></p>
+<p>Troubleshooting.
+- check if the DHCP server is running.
+- If that is working, then review the IP address ranges assigned to ensure they are correct and check for typos in the IP address.</p>
+<h2 id="how-to-identify-the-ip-address-on-a-linux-machine">How to identify the IP address on a linux machine?</h2>
+<p>At the prompt type.</p>
+<pre><code>  ip a 
+</code></pre>
+<p>Here is an example 
+<img alt="alt text" src="./screenshots/Alpine1-screenshots/alpine-get-ip-address.png" /></p>
+<h2 id="how-to-ssh-to-a-linux-machine">How to SSH to a Linux Machine?</h2>
+<p>Use a terminal client.Putty is a good terminal to use.
+In Windows 11 as I have Terminal client installed I will be using this lab.
+But any terminal program can be used.</p>
+<p>Back to ssh from Windows terminal
+I will peform further configuration from the Windows Terminal as I will be able to copy and paste commands.</p>
+<p>From Windows Terminal type the following command. You will be presented with a login request.</p>
+<pre><code>ssh -l root 192.168.100.1
+Password : `123` # if the proposed Password was used
+</code></pre>
+<p><img alt="alt text" src="./screenshots/Alpine1-screenshots/WindowsTerminal_ssh-alpine1.png" /></p>
+<h2 id="dhcp-is-installed-and-ssh-to-alpine1-server-established">DHCP is installed and SSH to <code>alpine1</code> server established.</h2>
+<h2 id="next-step">Next step</h2>
+<p>We will proceed with the router installation. </p>
+<p>The validation for DHCP and Internet on the private network will be tested at a later stage.</p>
+<p>Please continue with </p>
+<h1 id="102-alpine1-setup-router"><a href="./102-alpine1-setup-router.md">102-alpine1-setup-router</a></h1>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../100-alpine1-setup/" class="btn btn-neutral float-left" title="Initial Alpine OS setup - alpine1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../102-setup-router/" class="btn btn-neutral float-right" title="Configure as a Router  -alpine1">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>&copy; 2024 <a href="https://github.com/belajarpowershell"  target="_blank" rel="noopener">Suresh Solomon</a></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../100-alpine1-setup/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../102-setup-router/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
