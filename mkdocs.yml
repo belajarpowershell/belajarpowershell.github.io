@@ -6,17 +6,24 @@ extra_css:
 theme:
   name: material
   palette:
-    - media: "(prefers-color-scheme: light)"
-      #primary: youtube
-      scheme: default
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: black
+      accent: indigo
       toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
+        icon: material/toggle-switch-off
+        name: Switch to system preference
     
   #custom_dir: overrides
   features:
