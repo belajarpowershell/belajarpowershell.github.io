@@ -31,5 +31,5 @@ jobs:
             github_token: ${{ secrets.GITHUB_TOKEN }}
         #   personal_token: ${{ secrets.GITHUB_TOKEN }}
         #   publish_dir: ./site  # Adjust this to your MkDocs build output directory
-        #   user_name: GitHub Actions
+            user_name: GitHub Actions
         #   user_email: actions@users.noreply.github.com
