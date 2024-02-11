@@ -11,3 +11,4 @@ venv/
 frontmatter.json
 *frontmatter*s
 *draft*
+srv.code-workspace
