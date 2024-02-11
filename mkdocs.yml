@@ -1,6 +1,6 @@
 site_name: BelajarPowershell
 site_url: https://example.com/
-docs_dir: '../docs'
+#docs_dir: '../docs'
 extra_css:
   - stylesheets/extra.css
 theme:
