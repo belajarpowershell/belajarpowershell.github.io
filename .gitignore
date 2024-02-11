@@ -1,3 +1,13 @@
 /site
 .DS_Store
 venv/
+*.iso
+*.vhdx
+*.vm*
+*scratch*
+*draft*
+*New Text Document*
+*.ztr*
+frontmatter.json
+*frontmatter*s
+*draft*

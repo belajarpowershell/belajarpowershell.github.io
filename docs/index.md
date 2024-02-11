@@ -1,17 +1,24 @@
-# Welcome to MkDocs
+# Welcome to Kubernetes Lab Setup
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## Commands
+## What is Kubernetes Lab Setup ?
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Setting up Kubernetes locally on your Computer, is easy. 
+Kubernetes Lab Setup aims to provide a setup that is similar to a production environment.
 
-## Project layout
+This lab setup does not go into the Kubernetes direclty, but with this setup testing out applications on Kubernetes becomes so much easier. 
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Prerequisites
+
+In order to understand the steps in Kubernetes Lab Setup, the following knowledge is required.
+* Basic Linux knowledge - You should be able to connect and navigate a Linux environment.
+* Basic Hyper-V - Be able to enable Hyper-V and be familiar with the steps to create Virtual Machines
+* PowerShell - Be able to use PowerShell ISE.
+
+
+## How to use Kubernetes Lab Setup ?
+
+The steps to deploy follow a certain sequence. Be sure to follow the sequence as described here.
+When I try some new guide, I sometimes change names. Until you are aware of the impact of the changes , don't change anyting. 
+
+Being a Lab setup, comes with the need to destroy and rebuild , with the steps in Kubernetes Lab Setup the rebuild is much more easier and faster. 

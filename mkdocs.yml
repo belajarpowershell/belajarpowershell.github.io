@@ -1,36 +1,43 @@
-site_name: Kubernetes Lab setup
-site_url: https://belajarpowershell.github.io/kubernetes-lab/
-#docs_dir: 'Document'
-#custom_dir: themes/
+site_name: BelajarPowershell
+site_url: https://example.com/
+docs_dir: 'docs'
+extra_css:
+  - stylesheets/extra.css
 theme:
-  name: readthedocs
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - toc.integrate
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-    - content.code.annotation
-    - content.code.copy
-    - navigation.path
-    - navigation.indexes
-    - toc.follow
-  language: en
+  name: material
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      #primary: youtube
+      scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline 
+        icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-      primary: teal
-      accent: purple 
-    - scheme: slate 
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode    
-      primary: teal
-      accent: lime
+        name: Switch to light mode
+    
+  #custom_dir: overrides
+  features:
+    - tabs
+    - instant
+    - content.code.annotate
+  # name: readthedocs
+  # features:
+  #   - navigation.tabs
+  #   - navigation.sections
+  #   - toc.integrate
+  #   - navigation.top
+  #   - search.suggest
+  #   - search.highlight
+  #   - content.tabs.link
+  #   - content.code.annotation
+  #   - content.code.copy
+  #   - navigation.path
+  #   - navigation.indexes
+  #   - toc.follow
+
 markdown_extensions:
   - md_in_html
   - pymdownx.highlight:
@@ -39,8 +46,79 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-# plugins:
-#   - codeinclude
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+plugins:
+  - search
+  - table-reader
+  - codeinclude    
+
+language: en
+palette:
+  - scheme: default
+    toggle:
+      icon: material/toggle-switch-off-outline 
+      name: Switch to dark mode
+    primary: blue
+    accent: purple 
+  - scheme: slate 
+    toggle:
+      icon: material/toggle-switch
+      name: Switch to light mode    
+    primary: teal
+    accent: lime
+
+nav:
+  - Get started:
+      - index.md
+      - ReadMe.md
+  - Prerequisites:
+      - kubernetes-lab-setup\000-Prerequisites/001-Hyper-V-Host-Specification.md
+      - kubernetes-lab-setup\000-Prerequisites/002-High-Level-node-setup.md
+      - kubernetes-lab-setup\000-Prerequisites/002-vi-basics.md
+      - kubernetes-lab-setup\000-Prerequisites/003-clone-repository.md
+      - kubernetes-lab-setup\000-Prerequisites/004-Hyper-V-VM-creation.md
+  - Management Server alpine1 setup:
+      - kubernetes-lab-setup\100-alpine1\100-alpine1-setup.md
+      #- kubernetes-lab-setup\100-alpine1\1000-Clone-repository (copy).md
+      - kubernetes-lab-setup\100-alpine1\101-ssh-to-alpine1.md
+      - kubernetes-lab-setup\100-alpine1\102-Clone-repository.md
+      #- kubernetes-lab-setup\100-alpine1\103-setup-using-ansible-manual.md
+      - kubernetes-lab-setup\100-alpine1\103-setup-using-ansible.md
+      - Setup services Manual Steps:
+                - kubernetes-lab-setup\100-alpine1\manual-steps\101-DHCP-server.md
+                - kubernetes-lab-setup\100-alpine1\manual-steps\102-setup-router.md
+                - kubernetes-lab-setup\100-alpine1\manual-steps\103-setup-dns.md
+                - kubernetes-lab-setup\100-alpine1\manual-steps\104-setup-nginx.md
+                - kubernetes-lab-setup\100-alpine1\manual-steps\105-nfs.md
+                - kubernetes-lab-setup\100-alpine1\manual-steps\106-tftp.md
+                - kubernetes-lab-setup\100-alpine1\manual-steps\107-cloud-init.md
+                - kubernetes-lab-setup\100-alpine1\manual-steps\108-DHCP-for-PXE.md
+                - kubernetes-lab-setup\100-alpine1\manual-steps\109-setup-boot-files-part1-PXE.md
+                - kubernetes-lab-setup\100-alpine1\manual-steps\110-setup-boot-files-part2-OS.md
+                - kubernetes-lab-setup\100-alpine1\manual-steps\111-setup-boot-files-part3-pxelinux.cfg.md
+                #- kubernetes-lab-setup\100-alpine1\manual-steps\112-New-single-VM-setup-Ubuntu-autoinstall.md
+                - kubernetes-lab-setup\100-alpine1\manual-steps\113-generate-user-data-multipleVM.md
+      #- kubernetes-lab-setup\100-alpine1\104-Validation.md
+      - kubernetes-lab-setup\100-alpine1\113-Install-Ubuntu.md
+  - Lightweight Kubernetes Installation:
+      - kubernetes-lab-setup\200-kubernetes\200-ReadMe.md
+      - kubernetes-lab-setup\200-kubernetes\201-SSH-keys-setup.md
+      - kubernetes-lab-setup\200-kubernetes\202-Setup-k3s-with-Ansible.md
+      - Manual Steps:
+        - kubernetes-lab-setup\200-kubernetes\204-k3s-setup-complete.md
+        - kubernetes-lab-setup\200-kubernetes\manual-steps\202-Ansible-inventory.md
+        - kubernetes-lab-setup\200-kubernetes\manual-steps\203-Setup-k3s-with-Ansible.md
+        # - 900-Explainers\PXELINUX.md
+        # - 900-Explainers\generate-user-data-multipleVM.md
+        # - 900-Explainers\generate-user-data-reference.md
+
 
 copyright: |
   &copy; 2024 <a href="https://github.com/belajarpowershell"  target="_blank" rel="noopener">Suresh Solomon</a>
