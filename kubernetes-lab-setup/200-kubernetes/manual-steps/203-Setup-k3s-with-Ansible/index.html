@@ -8,26 +8,24 @@
       
       
       
-        <link rel="canonical" href="https://example.com/">
+        <link rel="canonical" href="https://example.com/kubernetes-lab-setup/200-kubernetes/manual-steps/203-Setup-k3s-with-Ansible/">
       
       
       
-        <link rel="next" href="ReadMe/">
       
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>Welcome to Kubernetes Lab Setup - BelajarPowershell</title>
+        <title>Ansible Playbook steps - BelajarPowershell</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +44,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-kubernetes-lab-setup" class="md-skip">
+        <a href="#ansible-playbook-steps" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="BelajarPowershell" class="md-header__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
+    <a href="../../../.." title="BelajarPowershell" class="md-header__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to Kubernetes Lab Setup
+              Ansible Playbook steps
             
           </span>
         </div>
@@ -211,7 +209,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="BelajarPowershell" class="md-nav__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
+    <a href="../../../.." title="BelajarPowershell" class="md-nav__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -226,19 +224,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -252,7 +248,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Get started
@@ -263,30 +259,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Welcome to Kubernetes Lab Setup
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -295,53 +271,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-kubernetes-lab-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is Kubernetes Lab Setup ?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-kubernetes-lab-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to use Kubernetes Lab Setup ?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -354,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ReadMe/" class="md-nav__link">
+      <a href="../../../../ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -417,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/001-Hyper-V-Host-Specification.md" class="md-nav__link">
+      <a href="../../../000-Prerequisites/001-Hyper-V-Host-Specification.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -438,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/002-High-Level-node-setup.md" class="md-nav__link">
+      <a href="../../../000-Prerequisites/002-High-Level-node-setup.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -459,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/002-vi-basics.md" class="md-nav__link">
+      <a href="../../../000-Prerequisites/002-vi-basics.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -480,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/003-clone-repository.md" class="md-nav__link">
+      <a href="../../../000-Prerequisites/003-clone-repository.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/004-Hyper-V-VM-creation.md" class="md-nav__link">
+      <a href="../../../000-Prerequisites/004-Hyper-V-VM-creation.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -564,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/100-alpine1-setup.md" class="md-nav__link">
+      <a href="../../../100-alpine1/100-alpine1-setup.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/101-ssh-to-alpine1.md" class="md-nav__link">
+      <a href="../../../100-alpine1/101-ssh-to-alpine1.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -606,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/102-Clone-repository.md" class="md-nav__link">
+      <a href="../../../100-alpine1/102-Clone-repository.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -627,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/103-setup-using-ansible.md" class="md-nav__link">
+      <a href="../../../100-alpine1/103-setup-using-ansible.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/101-DHCP-server.md" class="md-nav__link">
+      <a href="../../../100-alpine1/manual-steps/101-DHCP-server.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/102-setup-router.md" class="md-nav__link">
+      <a href="../../../100-alpine1/manual-steps/102-setup-router.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/103-setup-dns.md" class="md-nav__link">
+      <a href="../../../100-alpine1/manual-steps/103-setup-dns.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -746,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/104-setup-nginx.md" class="md-nav__link">
+      <a href="../../../100-alpine1/manual-steps/104-setup-nginx.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -767,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/105-nfs.md" class="md-nav__link">
+      <a href="../../../100-alpine1/manual-steps/105-nfs.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -788,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/106-tftp.md" class="md-nav__link">
+      <a href="../../../100-alpine1/manual-steps/106-tftp.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/107-cloud-init.md" class="md-nav__link">
+      <a href="../../../100-alpine1/manual-steps/107-cloud-init.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -830,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/108-DHCP-for-PXE.md" class="md-nav__link">
+      <a href="../../../100-alpine1/manual-steps/108-DHCP-for-PXE.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/109-setup-boot-files-part1-PXE.md" class="md-nav__link">
+      <a href="../../../100-alpine1/manual-steps/109-setup-boot-files-part1-PXE.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -872,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/110-setup-boot-files-part2-OS.md" class="md-nav__link">
+      <a href="../../../100-alpine1/manual-steps/110-setup-boot-files-part2-OS.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -893,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/111-setup-boot-files-part3-pxelinux.cfg.md" class="md-nav__link">
+      <a href="../../../100-alpine1/manual-steps/111-setup-boot-files-part3-pxelinux.cfg.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -914,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/113-generate-user-data-multipleVM.md" class="md-nav__link">
+      <a href="../../../100-alpine1/manual-steps/113-generate-user-data-multipleVM.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -943,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/113-Install-Ubuntu.md" class="md-nav__link">
+      <a href="../../../100-alpine1/113-Install-Ubuntu.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1006,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/200-ReadMe.md" class="md-nav__link">
+      <a href="../../200-ReadMe.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1027,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/201-SSH-keys-setup.md" class="md-nav__link">
+      <a href="../../201-SSH-keys-setup.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1048,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/202-Setup-k3s-with-Ansible.md" class="md-nav__link">
+      <a href="../../202-Setup-k3s-with-Ansible.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1104,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/204-k3s-setup-complete.md" class="md-nav__link">
+      <a href="../../204-k3s-setup-complete.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1125,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/manual-steps/202-Ansible-inventory.md" class="md-nav__link">
+      <a href="../202-Ansible-inventory.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1146,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/manual-steps/203-Setup-k3s-with-Ansible.md" class="md-nav__link">
+      <a href="../203-Setup-k3s-with-Ansible.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,27 +1131,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-kubernetes-lab-setup" class="md-nav__link">
+  <a href="#ansible-folder-content" class="md-nav__link">
     <span class="md-ellipsis">
-      What is Kubernetes Lab Setup ?
+      Ansible folder content
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#kubeconfig-on-alpine1" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Kubeconfig on alpine1
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-kubernetes-lab-setup" class="md-nav__link">
+  <a href="#kubectl-basic-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      How to use Kubernetes Lab Setup ?
+      kubectl basic commands
     </span>
   </a>
   
@@ -1243,20 +1172,141 @@
                   
 
 
-<h1 id="welcome-to-kubernetes-lab-setup">Welcome to Kubernetes Lab Setup</h1>
-<h2 id="what-is-kubernetes-lab-setup">What is Kubernetes Lab Setup ?</h2>
-<p>Setting up Kubernetes locally on your Computer, is easy. 
-Kubernetes Lab Setup aims to provide a setup that is similar to a production environment.</p>
-<p>This lab setup does not go into the Kubernetes direclty, but with this setup testing out applications on Kubernetes becomes so much easier. </p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>In order to understand the steps in Kubernetes Lab Setup, the following knowledge is required.
-* Basic Linux knowledge - You should be able to connect and navigate a Linux environment.
-* Basic Hyper-V - Be able to enable Hyper-V and be familiar with the steps to create Virtual Machines
-* PowerShell - Be able to use PowerShell ISE.</p>
-<h2 id="how-to-use-kubernetes-lab-setup">How to use Kubernetes Lab Setup ?</h2>
-<p>The steps to deploy follow a certain sequence. Be sure to follow the sequence as described here.
-When I try some new guide, I sometimes change names. Until you are aware of the impact of the changes , don't change anyting. </p>
-<p>Being a Lab setup, comes with the need to destroy and rebuild , with the steps in Kubernetes Lab Setup the rebuild is much more easier and faster. </p>
+<h1 id="ansible-playbook-steps">Ansible Playbook steps</h1>
+<p>Setting up a single node k3s is very quick , takes about 2-3 minutes to setup. Setting up a k3s High Availability cluster is more complex.</p>
+<p>Having the goal of getting a Kubernetes Lab setup quickly, the best option I had was to use Ansible.  I have playbooks to setup one k3s High Availability Clusters and a single node k3s. Managing the k3s is best to be remote, to accommodate that, made the <code>alpine1</code> the kubectl management server. </p>
+<p>The most challenging task I faced when I started with kubernetes was the KUBECONFIG . Once I had this working learning the other tasks were that much easier. The Playbook and bash scripts make this easier for you.  </p>
+<p>The following describes the relevant files in the <code>ansible</code> folder. That will help with the setup of the 2 k3s clusters mentioned.</p>
+<h4 id="ansible-folder-content">Ansible folder content</h4>
+<p>Folder <code>ansible</code></p>
+<p>Prepare / run this first </p>
+<p>hosts.ini</p>
+<blockquote>
+<ul>
+<li>contains the list of servers and the various roles they have.</li>
+<li>The Ansible playbook references this file on the servers to perform the tasks on.</li>
+</ul>
+</blockquote>
+<p>add-passphrase.sh</p>
+<blockquote>
+<ul>
+<li>The script to store the ssh-key passphrase so it can be referenced when Ansible connects to the remote servers.</li>
+<li>Run this script once before running the playbooks.</li>
+</ul>
+</blockquote>
+<p>copy-ssh-key.sh</p>
+<blockquote>
+<ul>
+<li>The ssh public key must be copied to the remote servers once. </li>
+<li>This script automates the task .</li>
+</ul>
+</blockquote>
+<p>Folder <code>playbook</code></p>
+<p>Run the ansible playbook in the sequence listed. The description of the tasks performed are listed below. </p>
+<p>00-apt-update.yml</p>
+<blockquote>
+<ul>
+<li>Performs apt-update on all Ubuntu servers</li>
+<li>Installs kubectl on <code>alpine1</code></li>
+</ul>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>execute the playbook run from `/srv/ansible`
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ansible-playbook 00-apt-update.yml  --user ubuntu --ask-become-pass  -i hosts.ini
+</span></code></pre></div>
+<p>01-k3s-loadbalancer-setup.yml</p>
+<blockquote>
+<ul>
+<li>Installs Docker  and Nginx on the Loadbalancer</li>
+</ul>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>execute the playbook run from `/srv/ansible`
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ansible-playbook 01-k3s-loadbalancer-setup.yml --user ubuntu --ask-become-pass  -i hosts.ini
+</span></code></pre></div>
+<p>j2\nginx.conf.j2</p>
+<blockquote>
+<ul>
+<li>When the load balancer is setup with <code>nginx</code> the required configuration for the loadbalancer is generated from the Jinja2 (j2) script.</li>
+</ul>
+</blockquote>
+<p>02-k3s-HA-setup.yml</p>
+<blockquote>
+<ul>
+<li>Installs k3s server on master1,master2 and master3</li>
+<li>Installs k3s agent on worker1,worker2,worker3.</li>
+</ul>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>execute the playbook run from `/srv/ansible`
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ansible-playbook 02-k3s-HA-setup.yml --user ubuntu --ask-become-pass  -i hosts.ini
+</span></code></pre></div>
+<p>02z-k3s-copy-kubeconfig.yml</p>
+<blockquote>
+<ul>
+<li>Copies kubeconfig files from cluster to  <code>ansible1</code> in the folder <code>/root/.kube./clusters/</code> to remotely manage the k3s cluster</li>
+<li>The kubeconfig file also updates the names to be specific to the cluster.</li>
+<li>Updates the localhost entries to <code>Loadbalancer</code>  </li>
+</ul>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>execute the playbook run from `/srv/ansible`
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ansible-playbook 02z-k3s-copy-kubeconfig.yml --user ubuntu --ask-become-pass  -i hosts.ini
+</span></code></pre></div>
+<p>03-k3s-single-node-setup.yml</p>
+<blockquote>
+<ul>
+<li>Installs k3s as a single instance.</li>
+</ul>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>execute the playbook run from `/srv/ansible`
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ansible-playbook 03-k3s-single-node-setup.yml --user ubuntu --ask-become-pass  -i hosts.ini
+</span></code></pre></div>
+<p>03z-k3s-copy-kubeconfig-single.yml</p>
+<blockquote>
+<ul>
+<li>Copies kubeconfig files from the single node k3s to  <code>ansible1</code>  in the folder <code>/root/.kube./clusters/</code> to remotely manage the k3s cluster</li>
+<li>The kubeconfig file also updates the names to be specific to the cluster.</li>
+<li>Updates the localhost entries to <code>Loadbalancer</code>  </li>
+</ul>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>execute the playbook run from `/srv/ansible`
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>ansible-playbook 03z-k3s-copy-kubeconfig-single.yml --user ubuntu --ask-become-pass  -i hosts.ini
+</span></code></pre></div>
+<p>98-k3s-remove-all.yml</p>
+<blockquote>
+<ul>
+<li>If there is a need to remove the k3s installations this playbook removes the k3s from  <code>master1,master2 ,master3,worker1,worker2,worker3,xsinglenode</code></li>
+</ul>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>execute the playbook run from `/srv/ansible`
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>ansible-playbook 98-k3s-remove-all.yml --user ubuntu --ask-become-pass  -i hosts.ini
+</span></code></pre></div>
+<p>ansible-vars.yml</p>
+<blockquote>
+<ul>
+<li>The ansible variables are stored in this file. </li>
+<li>In this example the file stores the various setup commands to install `k3s' for the different roles. </li>
+</ul>
+</blockquote>
+<h4 id="kubeconfig-on-alpine1">Kubeconfig on <code>alpine1</code></h4>
+<p>Once the scripts <code>02z-k3s-copy-kubeconfig.yml</code> and <code>03z-k3s-copy-kubeconfig-single.yml</code> are completed. The playbook copy the remote kubeconfig files from the remote servers . The files will be stored in <code>/root/.kube/clusters</code>  folder. </p>
+<p>We now need to have the KUBECONFIG setup on <code>alpine</code> . The following will merge all <code>*.yaml</code> files in <code>/root/.kube/clusters</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> export KUBECONFIG=$(for YAML in $(find ${HOME}/.kube/clusters -name &#39;*.yaml&#39;) ; do echo -n &quot;:${YAML}&quot;; done)
+</span></code></pre></div>
+<p>This is not permanent . Do check how you can make this permanent after logout from the session. </p>
+<h4 id="kubectl-basic-commands"><code>kubectl</code> basic commands</h4>
+<p>Running some basic <code>kubectl</code> commands.</p>
+<p>List of contexts. </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>(1) kubectl config get-contexts.
+</span></code></pre></div>
+<p>Change context</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>(2) and (4) kubectl config use-context &lt;context name&gt;
+</span></code></pre></div>
+<p>List kubernetes nodes</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>(3) and (4) kubectl get nodes
+</span></code></pre></div>
+<p>Here is a screenshot that will provide some perspective</p>
+<p><img alt="202-01-kubectl-example" src="../../../screenshots/202-01-kubectl-example.png" /></p>
+<ol>
+<li></li>
+</ol>
 
 
 
@@ -1307,10 +1357,10 @@ When I try some new guide, I sometimes change names. Until you are aware of the 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["tabs", "instant", "content.code.annotate"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["tabs", "instant", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   </body>

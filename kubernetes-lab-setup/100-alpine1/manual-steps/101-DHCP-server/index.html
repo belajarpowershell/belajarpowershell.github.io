@@ -8,26 +8,24 @@
       
       
       
-        <link rel="canonical" href="https://example.com/">
+        <link rel="canonical" href="https://example.com/kubernetes-lab-setup/100-alpine1/manual-steps/101-DHCP-server/">
       
       
       
-        <link rel="next" href="ReadMe/">
       
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>Welcome to Kubernetes Lab Setup - BelajarPowershell</title>
+        <title>Install and Configure DHCP - BelajarPowershell</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +44,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-kubernetes-lab-setup" class="md-skip">
+        <a href="#install-and-configure-dhcp" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="BelajarPowershell" class="md-header__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
+    <a href="../../../.." title="BelajarPowershell" class="md-header__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to Kubernetes Lab Setup
+              Install and Configure DHCP
             
           </span>
         </div>
@@ -211,7 +209,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="BelajarPowershell" class="md-nav__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
+    <a href="../../../.." title="BelajarPowershell" class="md-nav__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -226,19 +224,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -252,7 +248,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Get started
@@ -263,30 +259,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Welcome to Kubernetes Lab Setup
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -295,53 +271,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-kubernetes-lab-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is Kubernetes Lab Setup ?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-kubernetes-lab-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to use Kubernetes Lab Setup ?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -354,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ReadMe/" class="md-nav__link">
+      <a href="../../../../ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -417,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/001-Hyper-V-Host-Specification.md" class="md-nav__link">
+      <a href="../../../000-Prerequisites/001-Hyper-V-Host-Specification.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -438,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/002-High-Level-node-setup.md" class="md-nav__link">
+      <a href="../../../000-Prerequisites/002-High-Level-node-setup.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -459,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/002-vi-basics.md" class="md-nav__link">
+      <a href="../../../000-Prerequisites/002-vi-basics.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -480,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/003-clone-repository.md" class="md-nav__link">
+      <a href="../../../000-Prerequisites/003-clone-repository.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/004-Hyper-V-VM-creation.md" class="md-nav__link">
+      <a href="../../../000-Prerequisites/004-Hyper-V-VM-creation.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -564,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/100-alpine1-setup.md" class="md-nav__link">
+      <a href="../../100-alpine1-setup.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/101-ssh-to-alpine1.md" class="md-nav__link">
+      <a href="../../101-ssh-to-alpine1.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -606,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/102-Clone-repository.md" class="md-nav__link">
+      <a href="../../102-Clone-repository.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -627,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/103-setup-using-ansible.md" class="md-nav__link">
+      <a href="../../103-setup-using-ansible.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/101-DHCP-server.md" class="md-nav__link">
+      <a href="../101-DHCP-server.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/102-setup-router.md" class="md-nav__link">
+      <a href="../102-setup-router.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/103-setup-dns.md" class="md-nav__link">
+      <a href="../103-setup-dns.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -746,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/104-setup-nginx.md" class="md-nav__link">
+      <a href="../104-setup-nginx.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -767,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/105-nfs.md" class="md-nav__link">
+      <a href="../105-nfs.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -788,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/106-tftp.md" class="md-nav__link">
+      <a href="../106-tftp.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/107-cloud-init.md" class="md-nav__link">
+      <a href="../107-cloud-init.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -830,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/108-DHCP-for-PXE.md" class="md-nav__link">
+      <a href="../108-DHCP-for-PXE.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/109-setup-boot-files-part1-PXE.md" class="md-nav__link">
+      <a href="../109-setup-boot-files-part1-PXE.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -872,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/110-setup-boot-files-part2-OS.md" class="md-nav__link">
+      <a href="../110-setup-boot-files-part2-OS.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -893,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/111-setup-boot-files-part3-pxelinux.cfg.md" class="md-nav__link">
+      <a href="../111-setup-boot-files-part3-pxelinux.cfg.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -914,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/113-generate-user-data-multipleVM.md" class="md-nav__link">
+      <a href="../113-generate-user-data-multipleVM.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -943,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/113-Install-Ubuntu.md" class="md-nav__link">
+      <a href="../../113-Install-Ubuntu.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1006,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/200-ReadMe.md" class="md-nav__link">
+      <a href="../../../200-kubernetes/200-ReadMe.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1027,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/201-SSH-keys-setup.md" class="md-nav__link">
+      <a href="../../../200-kubernetes/201-SSH-keys-setup.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1048,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/202-Setup-k3s-with-Ansible.md" class="md-nav__link">
+      <a href="../../../200-kubernetes/202-Setup-k3s-with-Ansible.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1104,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/204-k3s-setup-complete.md" class="md-nav__link">
+      <a href="../../../200-kubernetes/204-k3s-setup-complete.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1125,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/manual-steps/202-Ansible-inventory.md" class="md-nav__link">
+      <a href="../../../200-kubernetes/manual-steps/202-Ansible-inventory.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1146,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/manual-steps/203-Setup-k3s-with-Ansible.md" class="md-nav__link">
+      <a href="../../../200-kubernetes/manual-steps/203-Setup-k3s-with-Ansible.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,27 +1131,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-kubernetes-lab-setup" class="md-nav__link">
+  <a href="#restart-the-dhcp-deamon" class="md-nav__link">
     <span class="md-ellipsis">
-      What is Kubernetes Lab Setup ?
+      Restart the DHCP deamon
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#dhcp-setup-is-complete-for-alpine1-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      DHCP Setup is complete  for alpine1 server .
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-kubernetes-lab-setup" class="md-nav__link">
+  <a href="#steps-to-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      How to use Kubernetes Lab Setup ?
+      Steps to ssh.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-identify-the-ip-address-on-a-linux-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to identify the IP address on a linux machine?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-ssh-to-a-linux-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to SSH to a Linux Machine?
     </span>
   </a>
   
@@ -1243,20 +1190,92 @@
                   
 
 
-<h1 id="welcome-to-kubernetes-lab-setup">Welcome to Kubernetes Lab Setup</h1>
-<h2 id="what-is-kubernetes-lab-setup">What is Kubernetes Lab Setup ?</h2>
-<p>Setting up Kubernetes locally on your Computer, is easy. 
-Kubernetes Lab Setup aims to provide a setup that is similar to a production environment.</p>
-<p>This lab setup does not go into the Kubernetes direclty, but with this setup testing out applications on Kubernetes becomes so much easier. </p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>In order to understand the steps in Kubernetes Lab Setup, the following knowledge is required.
-* Basic Linux knowledge - You should be able to connect and navigate a Linux environment.
-* Basic Hyper-V - Be able to enable Hyper-V and be familiar with the steps to create Virtual Machines
-* PowerShell - Be able to use PowerShell ISE.</p>
-<h2 id="how-to-use-kubernetes-lab-setup">How to use Kubernetes Lab Setup ?</h2>
-<p>The steps to deploy follow a certain sequence. Be sure to follow the sequence as described here.
-When I try some new guide, I sometimes change names. Until you are aware of the impact of the changes , don't change anyting. </p>
-<p>Being a Lab setup, comes with the need to destroy and rebuild , with the steps in Kubernetes Lab Setup the rebuild is much more easier and faster. </p>
+<h1 id="install-and-configure-dhcp">Install and Configure DHCP</h1>
+<p>For the initial setup we will have the basic DHCP configuration.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#install dhcpd
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>apk add dhcp
+</span></code></pre></div>
+<p>Update the file /etc/dhcp/dhcpd.conf with the content below.</p>
+<p>Use VI editor to edit ( or any other you are familiar with)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># using console you cannot copy paste, must type in manually
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a># create config file 
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>touch /etc/dhcp/dhcpd.conf
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a># edit config file
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>vi /etc/dhcp/dhcpd.conf
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>subnet 192.168.100.0 netmask 255.255.255.0 {
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  range 192.168.100.100 192.168.100.200;
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  option domain-name-servers 192.168.100.1;
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  option routers 192.168.100.1;
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>}
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>[esc] :x[enter] to save and exit
+</span></code></pre></div></p>
+<blockquote>
+<p>routers : The routers IP usually is the WIFI or WAN router IP. In this lab setup we want emulate an office network setup.
+In the subsequent steps we will review how to setup alpine1 as a Router.</p>
+<p>domain-name-servers : in this setup we want to resolve some internal hostnames  that cannot be resolved by public DNS servers.
+We want to have alpine1 to function as DNS server and also forward DNS request not resolved locally.
+The steps to configure alpine1 as DNS server is reviewed later.</p>
+</blockquote>
+<h2 id="restart-the-dhcp-deamon">Restart the DHCP deamon</h2>
+<p>To refresh the updated configuration restart the DHCP services.
+Any errors in configuration will appear at this point.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># set dhcpd to start at boot
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>rc-update add dhcpd default
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a># start the dhcpd service.
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>rc-service dhcpd start
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a># Check the dhcpd service status.
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>rc-service dhcpd status
+</span></code></pre></div>
+DHCP logs
+Later you may need to check if the IP addresses are assigned etc.
+These to files will be key for your troubleshooting.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cat /etc/dhcp/dhcpd.conf
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>cat /var/lib/dhcp/dhcpd.leases
+</span></code></pre></div></p>
+<h2 id="dhcp-setup-is-complete-for-alpine1-server">DHCP Setup is complete  for alpine1 server .</h2>
+<h2 id="steps-to-ssh">Steps to ssh.</h2>
+<p>If using DHCP, the gateway is also assigned to my Hyper-V host Network Interface.
+This caused some network issues where my connection to the internet kept timing out. When I set the IP address without the Gateway the network issues were no longer present. 
+So better to set the IP address manualy then obtain via DHCP.</p>
+<p>Paste the following Powershell code int Windows Terminal as Administrator.</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ifindex=(Get-NetAdapter | Where-Object { $_.Name -like &quot;*192.168.100.0*&quot; }).InterfaceIndex
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>New-NetIPAddress -InterfaceIndex $ifindex -IPAddress 192.168.100.2 -PrefixLength 24
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Get-DnsClient -InterfaceIndex $ifindex | Set-DnsClientServerAddress -ServerAddresses (&quot;192.168.100.1&quot;)
+</span></code></pre></div>
+Validate</p>
+<p>Run this command on Windows Terminal to check if an IP has been assigned
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>get-netipaddress -InterfaceIndex (Get-NetAdapter | Where-Object { $_.Name -like &quot;*192.168.100.0*&quot; }).InterfaceIndex
+</span></code></pre></div>
+<img alt="alt text" src="../../../screenshots/Alpine1-screenshots/WindowsTerminal_checkIP.png" /></p>
+<p>Troubleshooting.
+- If that is working, then review the IP address ranges assigned to ensure they are correct and check for typos in the IP address.
+- Ensure only one gateway IP address is assigned. Having multiple gateways will introduce connectivity issues.</p>
+<h2 id="how-to-identify-the-ip-address-on-a-linux-machine">How to identify the IP address on a linux machine?</h2>
+<p>At the prompt type.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>  ip a 
+</span></code></pre></div>
+Here is an example 
+<img alt="alt text" src="../../../screenshots/Alpine1-screenshots/alpine-get-ip-address.png" /></p>
+<h2 id="how-to-ssh-to-a-linux-machine">How to SSH to a Linux Machine?</h2>
+<p>Use a terminal client.Putty is a good terminal to use.
+In Windows 11 as I have Terminal client installed I will be using this lab.
+But any terminal program can be used.</p>
+<p>Back to ssh from Windows terminal
+I will peform further configuration from the Windows Terminal as I will be able to copy and paste commands.</p>
+<p>From Windows Terminal type the following command. You will be presented with a login request.</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ssh -l root 192.168.100.1
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Password : `123` # if the proposed Password was used
+</span></code></pre></div>
+<img alt="alt text" src="../../../screenshots/Alpine1-screenshots/WindowsTerminal_ssh-alpine1.png" /></p>
+<h1 id="dhcp-is-installed-and-ssh-to-alpine1-server-established">DHCP is installed and SSH to <code>alpine1</code> server established.</h1>
+<h2 id="next-step">Next step</h2>
+<p>We will proceed with the router installation. </p>
+<p>The validation for DHCP and Internet on the private network will be tested at a later stage.</p>
+<p>Please continue with </p>
+<h3 id="102-alpine1-setup-route">102-alpine1-setup-route</h3>
 
 
 
@@ -1307,10 +1326,10 @@ When I try some new guide, I sometimes change names. Until you are aware of the 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["tabs", "instant", "content.code.annotate"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["tabs", "instant", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   </body>

@@ -1,197 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/</loc>
+         <loc>https://example.com/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/</loc>
+         <loc>https://example.com/ReadMe/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/scratch/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/000-Prerequisites/001-Hyper-V-Host-Specification/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/Introduction/000-ReadMeFirst/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/000-Prerequisites/002-High-Level-node-setup/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/Introduction/001-High-Level-node-setup/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/000-Prerequisites/002-vi-basics/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/Introduction/001-Hyper-V-Host-Specification/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/000-Prerequisites/003-clone-repository/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/Introduction/001-Hyper-V-VM-creation/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/000-Prerequisites/004-Hyper-V-VM-creation/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/Pre%20Requisites/002-vi-basics/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/100-alpine1-setup/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/Virtual%20Machine%20Deployment/113-New-single-VM-setup-Ubuntu-autoinstall/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/1000-Clone-repository%20%28copy%29/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/Virtual%20Machine%20Deployment/114-generate-user-data-multipleVM/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/101-ssh-to-alpine1/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/Virtual%20Machine%20Deployment/114-generate-user-data-reference/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/102-Clone-repository/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/100-alpine1-setup/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/103-setup-using-ansible-manual/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/101-DHCP-server/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/103-setup-using-ansible/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/102-setup-router/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/104-Validation/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/103-setup-dns/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/113-Install-Ubuntu/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/104-setup-nginx/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/manual-steps/101-DHCP-server/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/105-nfs/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/manual-steps/102-setup-router/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/106-tftp/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/manual-steps/103-setup-dns/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/107-cloud-init/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/manual-steps/104-setup-nginx/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/108-DHCP-for-PXE/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/manual-steps/105-nfs/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/109-setup-boot-files-part1/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/manual-steps/106-tftp/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/110-setup-boot-files-part2-PXE/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/manual-steps/107-cloud-init/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/111-setup-boot-files-part3-OS/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/manual-steps/108-DHCP-for-PXE/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/alpine1/112-setup-boot-files-part4-pxelinux.cfg/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/manual-steps/109-setup-boot-files-part1-PXE/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/draft/200-setup-alpine-LB/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/manual-steps/110-setup-boot-files-part2-OS/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/draft/9108-alpine1-setup-pxe-bootmenu%20copy/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/manual-steps/111-setup-boot-files-part3-pxelinux.cfg/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/draft/9108-alpine1-setup-pxe-bootmenu/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/manual-steps/112-New-single-VM-setup-Ubuntu-autoinstall/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/draft/999-alpine1-DHCP-set-hostname/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/100-alpine1/manual-steps/113-generate-user-data-multipleVM/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/draft/argo-cd/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/200-kubernetes/200-ReadMe/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/draft/kubernetes-upgrade/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/200-kubernetes/201-SSH-keys-setup/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/draft/ad-login/001-k3s-setup/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/200-kubernetes/202-Setup-k3s-with-Ansible/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/draft/ad-login/azure-ad-setup/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/200-kubernetes/204-k3s-setup-complete/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/draft/ad-login/entra-app-registration-aks-cli-kubectl/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/200-kubernetes/manual-steps/202-Ansible-inventory/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/draft/ad-login/kubectl-kubelogin/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/200-kubernetes/manual-steps/203-Setup-k3s-with-Ansible/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/draft/ad-login/kubectl-login-ad/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/900-Explainers/PXELINUX/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/draft/ad-login/test-ad-authentication/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/900-Explainers/generate-user-data-multipleVM/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/draft/ad-login/windows-install-az-cli/</loc>
-         <lastmod>2024-02-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/k3s-deployment/200-Ansible-setup/</loc>
-         <lastmod>2024-02-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://belajarpowershell.github.io/kubernetes-lab/Document/k3s-deployment/201-k3s-setup/</loc>
+         <loc>https://example.com/kubernetes-lab-setup/900-Explainers/generate-user-data-reference/</loc>
          <lastmod>2024-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>

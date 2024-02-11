@@ -8,26 +8,24 @@
       
       
       
-        <link rel="canonical" href="https://example.com/">
+        <link rel="canonical" href="https://example.com/kubernetes-lab-setup/000-Prerequisites/002-High-Level-node-setup/">
       
       
       
-        <link rel="next" href="ReadMe/">
       
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>Welcome to Kubernetes Lab Setup - BelajarPowershell</title>
+        <title>High Level Design - BelajarPowershell</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +44,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-kubernetes-lab-setup" class="md-skip">
+        <a href="#high-level-design" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="BelajarPowershell" class="md-header__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
+    <a href="../../.." title="BelajarPowershell" class="md-header__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to Kubernetes Lab Setup
+              High Level Design
             
           </span>
         </div>
@@ -211,7 +209,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="BelajarPowershell" class="md-nav__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
+    <a href="../../.." title="BelajarPowershell" class="md-nav__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -226,19 +224,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -252,7 +248,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Get started
@@ -263,30 +259,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Welcome to Kubernetes Lab Setup
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -295,53 +271,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-kubernetes-lab-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is Kubernetes Lab Setup ?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-kubernetes-lab-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to use Kubernetes Lab Setup ?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -354,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ReadMe/" class="md-nav__link">
+      <a href="../../../ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -417,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/001-Hyper-V-Host-Specification.md" class="md-nav__link">
+      <a href="../001-Hyper-V-Host-Specification.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -438,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/002-High-Level-node-setup.md" class="md-nav__link">
+      <a href="../002-High-Level-node-setup.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -459,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/002-vi-basics.md" class="md-nav__link">
+      <a href="../002-vi-basics.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -480,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/003-clone-repository.md" class="md-nav__link">
+      <a href="../003-clone-repository.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/004-Hyper-V-VM-creation.md" class="md-nav__link">
+      <a href="../004-Hyper-V-VM-creation.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -564,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/100-alpine1-setup.md" class="md-nav__link">
+      <a href="../../100-alpine1/100-alpine1-setup.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/101-ssh-to-alpine1.md" class="md-nav__link">
+      <a href="../../100-alpine1/101-ssh-to-alpine1.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -606,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/102-Clone-repository.md" class="md-nav__link">
+      <a href="../../100-alpine1/102-Clone-repository.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -627,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/103-setup-using-ansible.md" class="md-nav__link">
+      <a href="../../100-alpine1/103-setup-using-ansible.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/101-DHCP-server.md" class="md-nav__link">
+      <a href="../../100-alpine1/manual-steps/101-DHCP-server.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/102-setup-router.md" class="md-nav__link">
+      <a href="../../100-alpine1/manual-steps/102-setup-router.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/103-setup-dns.md" class="md-nav__link">
+      <a href="../../100-alpine1/manual-steps/103-setup-dns.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -746,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/104-setup-nginx.md" class="md-nav__link">
+      <a href="../../100-alpine1/manual-steps/104-setup-nginx.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -767,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/105-nfs.md" class="md-nav__link">
+      <a href="../../100-alpine1/manual-steps/105-nfs.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -788,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/106-tftp.md" class="md-nav__link">
+      <a href="../../100-alpine1/manual-steps/106-tftp.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/107-cloud-init.md" class="md-nav__link">
+      <a href="../../100-alpine1/manual-steps/107-cloud-init.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -830,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/108-DHCP-for-PXE.md" class="md-nav__link">
+      <a href="../../100-alpine1/manual-steps/108-DHCP-for-PXE.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/109-setup-boot-files-part1-PXE.md" class="md-nav__link">
+      <a href="../../100-alpine1/manual-steps/109-setup-boot-files-part1-PXE.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -872,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/110-setup-boot-files-part2-OS.md" class="md-nav__link">
+      <a href="../../100-alpine1/manual-steps/110-setup-boot-files-part2-OS.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -893,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/111-setup-boot-files-part3-pxelinux.cfg.md" class="md-nav__link">
+      <a href="../../100-alpine1/manual-steps/111-setup-boot-files-part3-pxelinux.cfg.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -914,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/113-generate-user-data-multipleVM.md" class="md-nav__link">
+      <a href="../../100-alpine1/manual-steps/113-generate-user-data-multipleVM.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -943,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/113-Install-Ubuntu.md" class="md-nav__link">
+      <a href="../../100-alpine1/113-Install-Ubuntu.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1006,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/200-ReadMe.md" class="md-nav__link">
+      <a href="../../200-kubernetes/200-ReadMe.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1027,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/201-SSH-keys-setup.md" class="md-nav__link">
+      <a href="../../200-kubernetes/201-SSH-keys-setup.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1048,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/202-Setup-k3s-with-Ansible.md" class="md-nav__link">
+      <a href="../../200-kubernetes/202-Setup-k3s-with-Ansible.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1104,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/204-k3s-setup-complete.md" class="md-nav__link">
+      <a href="../../200-kubernetes/204-k3s-setup-complete.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1125,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/manual-steps/202-Ansible-inventory.md" class="md-nav__link">
+      <a href="../../200-kubernetes/manual-steps/202-Ansible-inventory.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1146,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/manual-steps/203-Setup-k3s-with-Ansible.md" class="md-nav__link">
+      <a href="../../200-kubernetes/manual-steps/203-Setup-k3s-with-Ansible.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,27 +1131,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-kubernetes-lab-setup" class="md-nav__link">
+  <a href="#high-level-network-diagram" class="md-nav__link">
     <span class="md-ellipsis">
-      What is Kubernetes Lab Setup ?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-kubernetes-lab-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to use Kubernetes Lab Setup ?
+      High Level Network Diagram
     </span>
   </a>
   
@@ -1243,20 +1154,105 @@
                   
 
 
-<h1 id="welcome-to-kubernetes-lab-setup">Welcome to Kubernetes Lab Setup</h1>
-<h2 id="what-is-kubernetes-lab-setup">What is Kubernetes Lab Setup ?</h2>
-<p>Setting up Kubernetes locally on your Computer, is easy. 
-Kubernetes Lab Setup aims to provide a setup that is similar to a production environment.</p>
-<p>This lab setup does not go into the Kubernetes direclty, but with this setup testing out applications on Kubernetes becomes so much easier. </p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>In order to understand the steps in Kubernetes Lab Setup, the following knowledge is required.
-* Basic Linux knowledge - You should be able to connect and navigate a Linux environment.
-* Basic Hyper-V - Be able to enable Hyper-V and be familiar with the steps to create Virtual Machines
-* PowerShell - Be able to use PowerShell ISE.</p>
-<h2 id="how-to-use-kubernetes-lab-setup">How to use Kubernetes Lab Setup ?</h2>
-<p>The steps to deploy follow a certain sequence. Be sure to follow the sequence as described here.
-When I try some new guide, I sometimes change names. Until you are aware of the impact of the changes , don't change anyting. </p>
-<p>Being a Lab setup, comes with the need to destroy and rebuild , with the steps in Kubernetes Lab Setup the rebuild is much more easier and faster. </p>
+<h1 id="high-level-design">High Level Design</h1>
+<table>
+<thead>
+<tr>
+<th>hostname</th>
+<th>IP address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alpine1</td>
+<td>192.168.100.1/24</td>
+</tr>
+<tr>
+<td>Hyper-V-Host</td>
+<td>192.168.100.2/24</td>
+</tr>
+<tr>
+<td>xsinglenode</td>
+<td>192.168.100.199/24</td>
+</tr>
+<tr>
+<td>loadbalancer</td>
+<td>192.168.100.201/24</td>
+</tr>
+<tr>
+<td>master1</td>
+<td>192.168.100.202/24</td>
+</tr>
+<tr>
+<td>master2</td>
+<td>192.168.100.203/24</td>
+</tr>
+<tr>
+<td>master3</td>
+<td>192.168.100.204/24</td>
+</tr>
+<tr>
+<td>worker1</td>
+<td>192.168.100.205/24</td>
+</tr>
+<tr>
+<td>worker2</td>
+<td>192.168.100.206/24</td>
+</tr>
+<tr>
+<td>worker3</td>
+<td>192.168.100.207/24</td>
+</tr>
+<tr>
+<td>metallb</td>
+<td>192.168.100.208-215</td>
+</tr>
+</tbody>
+</table>
+<p><code>alpine1</code> functions for the devices in the subnet <code>192.168.100.0/24</code> as 
+- DHCP server 
+- Internet Router This server has 2 NIC one for the Internet access and another on the subnet <code>192.168.100.0/24</code>
+- DNS
+- NGINX web server
+- NFS server
+- TFTP server
+- Hosting the various files required for the Ubuntu and Kubernetese setup</p>
+<p><code>xsinglenode</code> Is a single node implementation of Kubernetes.</p>
+<p><code>loadbalancer</code> functions as the entry point to the Master nodes, performing the High Availability fucntions for the multiple Master nodes.</p>
+<p><code>master1/2/3</code> This is the Kubernetes Control plane. Acting as a High Availability setup that allows for 1 Master node failure at any time.</p>
+<p><code>worker1/2/3</code> The Kubernetes workloads are deployed on these nodes. 3 nodes allow for some load balancing in the event nodes need to be taken down for maintenance purposes.</p>
+<p><code>metallb</code> The Ingress requires a set of IP addresses to cater for incoming traffic to the Kubernetes cluster. These IP ranges are reserved for this functionality.</p>
+<h2 id="high-level-network-diagram">High Level Network Diagram</h2>
+<p>HYPER-V Network connectivity
+All the VM's will use <code>alpine1</code> as the gateway to the internet.
+Apart from the gateway function, <code>alpine1</code> also acts as performs several other functions. </p>
+<pre class="mermaid"><code>flowchart TD
+subgraph HYPER-V Network connectivity
+Internet o--o 
+    newLines["`alpine1
+    DHCP
+    Router
+    DNS
+    NGINX
+    NFS
+    TFTP`"]
+newLines["`**alpine1**
+DHCP 
+Router
+DNS
+NGINX
+NFS
+TFTP`"]  o--o alpine1
+alpine1 o--o xsinglenode;
+alpine1 o--o loadbalancer;
+alpine1 o--o master1;
+alpine1 o--o master2;
+alpine1 o--o master3;
+alpine1 o--o worker1;
+alpine1 o--o worker2;
+
+alpine1--&gt;worker3;
+end</code></pre>
 
 
 
@@ -1307,10 +1303,10 @@ When I try some new guide, I sometimes change names. Until you are aware of the 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["tabs", "instant", "content.code.annotate"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["tabs", "instant", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   </body>

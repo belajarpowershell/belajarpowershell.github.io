@@ -8,26 +8,24 @@
       
       
       
-        <link rel="canonical" href="https://example.com/">
+        <link rel="canonical" href="https://example.com/kubernetes-lab-setup/100-alpine1/100-alpine1-setup/">
       
       
       
-        <link rel="next" href="ReadMe/">
       
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>Welcome to Kubernetes Lab Setup - BelajarPowershell</title>
+        <title>Install Alpine OS on VM alpine1 - BelajarPowershell</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +44,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-kubernetes-lab-setup" class="md-skip">
+        <a href="#install-alpine-os-on-vm-alpine1" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="BelajarPowershell" class="md-header__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
+    <a href="../../.." title="BelajarPowershell" class="md-header__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to Kubernetes Lab Setup
+              Install Alpine OS on VM alpine1
             
           </span>
         </div>
@@ -211,7 +209,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="BelajarPowershell" class="md-nav__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
+    <a href="../../.." title="BelajarPowershell" class="md-nav__button md-logo" aria-label="BelajarPowershell" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -226,19 +224,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -252,7 +248,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Get started
@@ -263,30 +259,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Welcome to Kubernetes Lab Setup
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -295,53 +271,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-kubernetes-lab-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is Kubernetes Lab Setup ?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-kubernetes-lab-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to use Kubernetes Lab Setup ?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -354,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ReadMe/" class="md-nav__link">
+      <a href="../../../ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -417,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/001-Hyper-V-Host-Specification.md" class="md-nav__link">
+      <a href="../../000-Prerequisites/001-Hyper-V-Host-Specification.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -438,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/002-High-Level-node-setup.md" class="md-nav__link">
+      <a href="../../000-Prerequisites/002-High-Level-node-setup.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -459,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/002-vi-basics.md" class="md-nav__link">
+      <a href="../../000-Prerequisites/002-vi-basics.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -480,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/003-clone-repository.md" class="md-nav__link">
+      <a href="../../000-Prerequisites/003-clone-repository.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/000-Prerequisites/004-Hyper-V-VM-creation.md" class="md-nav__link">
+      <a href="../../000-Prerequisites/004-Hyper-V-VM-creation.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -564,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/100-alpine1-setup.md" class="md-nav__link">
+      <a href="../100-alpine1-setup.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/101-ssh-to-alpine1.md" class="md-nav__link">
+      <a href="../101-ssh-to-alpine1.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -606,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/102-Clone-repository.md" class="md-nav__link">
+      <a href="../102-Clone-repository.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -627,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/103-setup-using-ansible.md" class="md-nav__link">
+      <a href="../103-setup-using-ansible.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/101-DHCP-server.md" class="md-nav__link">
+      <a href="../manual-steps/101-DHCP-server.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/102-setup-router.md" class="md-nav__link">
+      <a href="../manual-steps/102-setup-router.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/103-setup-dns.md" class="md-nav__link">
+      <a href="../manual-steps/103-setup-dns.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -746,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/104-setup-nginx.md" class="md-nav__link">
+      <a href="../manual-steps/104-setup-nginx.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -767,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/105-nfs.md" class="md-nav__link">
+      <a href="../manual-steps/105-nfs.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -788,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/106-tftp.md" class="md-nav__link">
+      <a href="../manual-steps/106-tftp.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/107-cloud-init.md" class="md-nav__link">
+      <a href="../manual-steps/107-cloud-init.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -830,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/108-DHCP-for-PXE.md" class="md-nav__link">
+      <a href="../manual-steps/108-DHCP-for-PXE.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/109-setup-boot-files-part1-PXE.md" class="md-nav__link">
+      <a href="../manual-steps/109-setup-boot-files-part1-PXE.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -872,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/110-setup-boot-files-part2-OS.md" class="md-nav__link">
+      <a href="../manual-steps/110-setup-boot-files-part2-OS.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -893,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/111-setup-boot-files-part3-pxelinux.cfg.md" class="md-nav__link">
+      <a href="../manual-steps/111-setup-boot-files-part3-pxelinux.cfg.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -914,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/manual-steps/113-generate-user-data-multipleVM.md" class="md-nav__link">
+      <a href="../manual-steps/113-generate-user-data-multipleVM.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -943,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/100-alpine1/113-Install-Ubuntu.md" class="md-nav__link">
+      <a href="../113-Install-Ubuntu.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1006,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/200-ReadMe.md" class="md-nav__link">
+      <a href="../../200-kubernetes/200-ReadMe.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1027,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/201-SSH-keys-setup.md" class="md-nav__link">
+      <a href="../../200-kubernetes/201-SSH-keys-setup.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1048,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/202-Setup-k3s-with-Ansible.md" class="md-nav__link">
+      <a href="../../200-kubernetes/202-Setup-k3s-with-Ansible.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1104,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/204-k3s-setup-complete.md" class="md-nav__link">
+      <a href="../../200-kubernetes/204-k3s-setup-complete.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1125,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/manual-steps/202-Ansible-inventory.md" class="md-nav__link">
+      <a href="../../200-kubernetes/manual-steps/202-Ansible-inventory.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1146,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes-lab-setup/200-kubernetes/manual-steps/203-Setup-k3s-with-Ansible.md" class="md-nav__link">
+      <a href="../../200-kubernetes/manual-steps/203-Setup-k3s-with-Ansible.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,27 +1131,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-kubernetes-lab-setup" class="md-nav__link">
+  <a href="#key-information" class="md-nav__link">
     <span class="md-ellipsis">
-      What is Kubernetes Lab Setup ?
+      Key information
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#hyper-v-configuration-for-reference" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Hyper-V configuration for reference
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-kubernetes-lab-setup" class="md-nav__link">
+  <a href="#alpine-install-iso-first-boot" class="md-nav__link">
     <span class="md-ellipsis">
-      How to use Kubernetes Lab Setup ?
+      Alpine install ISO first boot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-ipv6-on-alpine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable IPv6 on Alpine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-alpine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Alpine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-begins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation begins.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup completed
     </span>
   </a>
   
@@ -1243,20 +1208,79 @@
                   
 
 
-<h1 id="welcome-to-kubernetes-lab-setup">Welcome to Kubernetes Lab Setup</h1>
-<h2 id="what-is-kubernetes-lab-setup">What is Kubernetes Lab Setup ?</h2>
-<p>Setting up Kubernetes locally on your Computer, is easy. 
-Kubernetes Lab Setup aims to provide a setup that is similar to a production environment.</p>
-<p>This lab setup does not go into the Kubernetes direclty, but with this setup testing out applications on Kubernetes becomes so much easier. </p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>In order to understand the steps in Kubernetes Lab Setup, the following knowledge is required.
-* Basic Linux knowledge - You should be able to connect and navigate a Linux environment.
-* Basic Hyper-V - Be able to enable Hyper-V and be familiar with the steps to create Virtual Machines
-* PowerShell - Be able to use PowerShell ISE.</p>
-<h2 id="how-to-use-kubernetes-lab-setup">How to use Kubernetes Lab Setup ?</h2>
-<p>The steps to deploy follow a certain sequence. Be sure to follow the sequence as described here.
-When I try some new guide, I sometimes change names. Until you are aware of the impact of the changes , don't change anyting. </p>
-<p>Being a Lab setup, comes with the need to destroy and rebuild , with the steps in Kubernetes Lab Setup the rebuild is much more easier and faster. </p>
+<h1 id="install-alpine-os-on-vm-alpine1">Install Alpine OS on VM <code>alpine1</code></h1>
+<h2 id="key-information">Key information</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Alpine Default login
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>login : root
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>password : blank
+</span></code></pre></div>
+<h2 id="hyper-v-configuration-for-reference">Hyper-V configuration for reference</h2>
+<p><img alt="alt text" src="../../screenshots/Alpine1-screenshots/Hyper-V-alpine1-config-overview.png" /></p>
+<h2 id="alpine-install-iso-first-boot">Alpine install ISO first boot</h2>
+<p><img alt="alt text" src="../../screenshots/Alpine1-screenshots/Alpine-boot-from-alpine-install-iso.png" /></p>
+<h2 id="disable-ipv6-on-alpine">Disable IPv6 on Alpine</h2>
+<p>In my setup IPv6 was not working.When downloading files IPv6 was used and delayed/errored out.
+If you have issues with IPv6, do disable before proceeding. </p>
+<p>Edit the /etc/sysctl.conf</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>vi /etc/sysctl.conf
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a># Manualy type in the following
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a># press [i] to be in insert /edit mode
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>net.ipv6.conf.all.disable_ipv6 = 1
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a># to save and exit following key press
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a># [esc] :x! [enter]
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a># reload the configuration
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>sysctl -p
+</span></code></pre></div>
+<h2 id="install-alpine">Install Alpine</h2>
+<p>After logging on at the prompt type 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>setup-alpine
+</span></code></pre></div>
+You will be asked a series of questions . I have listed my selection.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Keyboard Layout : [us]
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Keyboard variant : [us]
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Hostname : [alpine1]
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Network :
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>eth0: [dhcp]  # Internet connection
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>eth1: [192.168.100.1/24]
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>gateway: [none]
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>password : [123]
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>DNS Servers :
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>Timezone :[Singpore]
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>Proxy :[none]
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>ntp: default [chrony]  #if it takes long to complete , make sure ipv6 is disabled
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>Mirror :[r] # select random from list
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>setup user : [no]
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>Which ssh server? [openssh]
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>allow root ssh login: [yes]
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>Allow ssh login : [yes]
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>Which disks would you like to use : [sda]
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>Disk Mode How would you like to use it ? [sys]
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>Erase the above disks and continue? [y]
+</span></code></pre></div></p>
+<h2 id="installation-begins">Installation begins.</h2>
+<p>Once the installation is completed you will see the notice to reboot.
+Before rebooting, change the boot sequence in Hyper-V for alpine1 to be Hard Drive first.</p>
+<p>This will ensure the reboot will be to the Hard Disk.
+<img alt="alt text" src="../../screenshots/Alpine1-screenshots/Hyper-V-alpine2-boot-sequence-change-after-alpine-setup-completed.png" />
+On the apline1 Hyper-V console.
+the prompt will display press [enter]
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>installation complete type reboot [enter]
+</span></code></pre></div></p>
+<h2 id="setup-completed">Setup completed</h2>
+<p>These are the credentials for newly installed alpine1 . 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>login: root
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>pass: 123
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>#in this lab all passwords will be set with 123
+</span></code></pre></div>
+This screen will appear , take note of the login prompt <strong>'alpine1'</strong>. Indicating the installation is completed.</p>
+<p><img alt="alt text" src="../../screenshots/Alpine1-screenshots/vmconnect_odjAAmfYDN.png" /></p>
+<h1 id="alpine-os-install-completed">Alpine OS install completed</h1>
+<h2 id="next-step">Next step</h2>
+<p>We will proceed to setup alpine1 as a DHCP server </p>
+<p>Please continue with </p>
+<h3 id="101-alpine1-setup-dhcp-server">101-alpine1-setup-DHCP-server</h3>
 
 
 
@@ -1307,10 +1331,10 @@ When I try some new guide, I sometimes change names. Until you are aware of the 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["tabs", "instant", "content.code.annotate"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["tabs", "instant", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   </body>
