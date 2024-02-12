@@ -1,3 +1,7 @@
+<!-- ---
+template: home.html
+title: Home
+--- -->
 # Welcome to Kubernetes Lab Setup
 
 
