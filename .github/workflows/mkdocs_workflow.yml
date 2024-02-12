@@ -53,7 +53,7 @@ jobs:
         run: |
           pip install mkdocs-material
           pip install mkdocs-table-reader-plugin
-
+          pip install "mkdocs-material[imaging]"
       # - name: Install Insiders build
       #   if: github.event.repository.fork == false
       #   env:
