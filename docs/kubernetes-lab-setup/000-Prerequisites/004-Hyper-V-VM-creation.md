@@ -11,6 +11,8 @@ Before running the script, do create a Hyper-V Virtual `External` network with t
 
 Refer to following screenshot for the relevant steps.
 
+One key point to pay attention to is the step `5` ensure the selected Network has connectivity to the internet. This is key to ensure connectivity to the Internet.
+
 ![004-01-Hyper-V-create-network](./../screenshots/004-01-Hyper-V-create-network.png) 
 
 The PowerShell script to create the VM can now be executed.
