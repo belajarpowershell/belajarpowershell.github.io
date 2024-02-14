@@ -4,7 +4,7 @@
 As part of a Lab setup, I expect to create and destroy the VM's regularly.
 To reduce the pain of recreating manually, I use a PowerShell script to create the Hyper-V VM's with certain specifications.
 
-## Prerequisite
+### Prerequisite
 To use this script, you must have already have a working Hyper-V. You can refer to this link [Enable Hyper-V on Windows 11](https://techcommunity.microsoft.com/t5/educator-developer-blog/step-by-step-enabling-hyper-v-for-use-on-windows-11/ba-p/3745905)
 
 Before running the script, do create a Hyper-V Virtual `External` network with the name `internet` . Ensure to match the exact name, else the PowerShell script will fail to create the `alpine1` with the correct configuration.
@@ -15,6 +15,25 @@ Refer to following screenshot for the relevant steps.
 
 The PowerShell script to create the VM can now be executed.
 
+#### Download ISO files manually
+
+In some cases the PowerShell script will fail to download the ISO files. If this occurs the Hyper-V Virtual Machines will not be created correctly.
+
+If this happens, delete all the Hyper-V virtual Machines and download the ISO images to the working folder `$workingfolder` set in the script.
+
+```
+# download using a browser
+# save the iso to the $workingfolder\iso = "G:\kubernetes-project-lab\iso"
+# download both these images
+https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.4-x86_64.iso
+https://releases.ubuntu.com/focal/ubuntu-20.04.6-live-server-amd64.iso
+
+```
+
+
+
+
+
 #### PowerShell script to create Hyper-V Virtual Machines
 
 To use this script:-
@@ -22,7 +41,9 @@ To use this script:-
 
 - Open the file `C:\kubernetes-lab\srv\scripts\hyper-v_Host\001-Kubernetes-Create-HyperV-VM.ps1`
 
-  Click on the `Green Play` button, this will execute the script.
+- Check the work drive for `$workingfolder` to ensure the correct path is used this can be `c:\` or `d:\` depending on your configuration.
+
+- Save any changes and click on the `Green Play` button, this will execute the script.
 
 // method to access Video-- QR code?
 
