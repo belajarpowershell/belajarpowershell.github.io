@@ -5,6 +5,16 @@ To reduce the pain of recreating manually, I use a PowerShell script to create t
 
 To use this script, you must have already have a working Hyper-V. You can refer to this link [Enable Hyper-V on Windows 11](https://techcommunity.microsoft.com/t5/educator-developer-blog/step-by-step-enabling-hyper-v-for-use-on-windows-11/ba-p/3745905)
 
+Before running the script, do create a Hyper-V Virtual `External` network with the name `internet` . Ensure to match the exact name, else the PowerShell script will fail to create the `alpine1` with the correct configuration.
+
+Refer to following screenshot for the relevant steps.
+
+![004-01-Hyper-V-create-network](./../screenshots/004-01-Hyper-V-create-network.png) 
+
+The PowerShell script to create the VM can now be executed.
+
+
+
 To use this script:-
 - run `Powershell ISE` as Administrator. ( Right click `PowerShell ISE` select `Run as Administrator`)
 
@@ -18,7 +28,8 @@ To use this script:-
 
 #### Lessons Learned
 
-1. Hyper-V VM Memory needs to be at minimum 1GB. Any lower the Ubuntu will fail to install. Wasted a few days to catch this. 
-2. If you are using the download ISO to memory then you need to have a minimum of 4GB on the Hyper-V VM  to load the ISO to memory. 
+1. Ensure the Hyper-V Virtual Switch named `internet` is created prior to executing the script. 
+2. Hyper-V VM Memory needs to be at minimum 1GB. Any lower the Ubuntu will fail to install. Wasted a few days to catch this. 
+3. If you are using the download ISO to memory then you need to have a minimum of 4GB on the Hyper-V VM  to load the ISO to memory. 
 
 #### Once the Virtual Machines are created proceed to `100-alpine1-setup` steps.

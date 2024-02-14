@@ -36,7 +36,7 @@ get-netipaddress -InterfaceIndex (Get-NetAdapter | Where-Object { $_.Name -like 
 Run a ping test to `alpine1` , ensure its succesful.
 
 ```
-ping 192.168.00.1
+ping 192.168.100.1
 ```
 
 

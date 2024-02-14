@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../kubernetes-lab"
+		},
+		{
+			"path": "../fai-project"
+		},
+		{
+			"path": "../k3s-repository"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"powershell.cwd": "kubernetes-lab"
+	}
+}

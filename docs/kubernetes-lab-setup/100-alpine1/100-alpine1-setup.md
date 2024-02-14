@@ -48,14 +48,17 @@ Keyboard variant : [us]
 Hostname : [alpine1]
 Network :
 eth0: [dhcp]  # Internet connection
-eth1: [192.168.100.1/24]
+Do you want to do any manula network configuration ? : n
+eth1: [192.168.100.1/24] # this is connecting to the other VM's in Hyper-V
 gateway: [none]
+Do you want to do any manula network configuration ? : n
 password : [123]
 DNS Servers :
-Timezone :[Singpore]
+Timezone :[Singapore]
 Proxy :[none]
 ntp: default [chrony]  #if it takes long to complete , make sure ipv6 is disabled
-Mirror :[r] # select random from list
+Mirror :[r] # select random from list 
+# if this fails to reach any servers then recheck the network configuration to ensure the 2 networks eth0 and eth1 are configured correctly. press `ctrl+c` to exit and type `ping www.yahoo.com` to check for connectivity.
 setup user : [no]
 Which ssh server? [openssh]
 allow root ssh login: [yes]
