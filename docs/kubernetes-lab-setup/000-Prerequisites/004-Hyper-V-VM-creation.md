@@ -15,6 +15,23 @@ Refer to following screenshot for the relevant steps.
 
 The PowerShell script to create the VM can now be executed.
 
+#### Download ISO files manually
+
+In some cases the PowerShell script will fail to download the ISO files. If this occurs the Hyper-V Virtual Machines will not be created correctly.
+
+To fix this will make the steps more complex, to avoid this download the ISO images manually.
+
+If you ran the PowerShell script and hit the error you can restart by deleting all the Hyper-V virtual Machines and download the ISO images to the working folder `$workingfolder` set in the script.
+
+```
+# download using a browser
+# save the iso to the $workingfolder\iso = "G:\kubernetes-project-lab\iso"
+# download both these images
+https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.4-x86_64.iso
+https://releases.ubuntu.com/focal/ubuntu-20.04.6-live-server-amd64.iso
+
+```
+
 
 
 #### PowerShell script to create Hyper-V Virtual Machines
@@ -31,21 +48,6 @@ To use this script:-
 // method to access Video-- QR code?
 
 [Here is a video that might help](https://clipchamp.com/watch/EYzyfDZUGRv)
-
-#### Download ISO files manually
-
-In some cases the PowerShell script will fail to download the ISO files. If this occurs the Hyper-V Virtual Machines will not be created correctly.
-
-If this happens, delete all the Hyper-V virtual Machines and download the ISO images to the working folder `$workingfolder` set in the script.
-
-```
-# download using a browser
-# save the iso to the $workingfolder\iso = "G:\kubernetes-project-lab\iso"
-# download both these images
-https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.4-x86_64.iso
-https://releases.ubuntu.com/focal/ubuntu-20.04.6-live-server-amd64.iso
-
-```
 
 
 
