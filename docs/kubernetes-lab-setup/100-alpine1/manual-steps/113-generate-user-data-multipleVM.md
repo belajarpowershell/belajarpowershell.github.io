@@ -64,7 +64,7 @@ Validate by browsing `http://192.168.100.1/`
 
 
 
-![113-03-list-autoinstall-in-browser](./../../screenshots\113-03-list-autoinstall-in-browser.png)
+![113-03-list-autoinstall-in-browser](./../../screenshots/113-03-list-autoinstall-in-browser.png)
 
 // To update Video of Script generation and the Ubuntu setup.
 

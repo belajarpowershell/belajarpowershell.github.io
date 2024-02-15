@@ -36,7 +36,7 @@ Click on the `Green Play` button, this will execute the script.
 
 The generated files are in the subfolder  `.\autoinstall\`
 
-![113-01-location-of-script](./../screenshots\113-01-location-of-script.png)
+![113-01-location-of-script](./../screenshots/113-01-location-of-script.png)
 
 
 
@@ -58,7 +58,7 @@ Using [WinSCP](https://winscp.net/eng/download.php) copy the files created to th
 2. Ensure the path to the `user-data-*` files are correct.
 3. The destination path on `alpine1` is equally important.
 
-![113-02-wsftp-cp-autoinstall](./../screenshots\113-02-wsftp-cp-autoinstall.png)
+![113-02-wsftp-cp-autoinstall](./../screenshots/113-02-wsftp-cp-autoinstall.png)
 
 
 
@@ -68,7 +68,7 @@ Validate by browsing `http://192.168.100.1/`
 
 
 
-![113-03-list-autoinstall-in-browser](./../screenshots\113-03-list-autoinstall-in-browser.png)
+![113-03-list-autoinstall-in-browser](./../screenshots/113-03-list-autoinstall-in-browser.png)
 
 ### Step 4
 
