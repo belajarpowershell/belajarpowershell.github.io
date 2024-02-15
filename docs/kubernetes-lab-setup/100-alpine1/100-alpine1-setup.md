@@ -47,11 +47,13 @@ Keyboard Layout : [us]
 Keyboard variant : [us]
 Hostname : [alpine1]
 Network :
-eth0: [dhcp]  # Internet connection
-Do you want to do any manula network configuration ? : n
-eth1: [192.168.100.1/24] # this is connecting to the other VM's in Hyper-V
+Which one do you want to initialize? [eth0] : <enter>
+Ip address for eth0: [dhcp]  # Internet connection
+Do you want to do any manual network configuration ? : n
+Which one do you want to initialize? [eth1] : <enter>
+Ip address for eth1: [192.168.100.1/24] # this is connecting to the other VM's in Hyper-V
 gateway: [none]
-Do you want to do any manula network configuration ? : n
+Do you want to do any manual network configuration ? : n
 password : [123]
 DNS Servers :
 Timezone :[Singapore]

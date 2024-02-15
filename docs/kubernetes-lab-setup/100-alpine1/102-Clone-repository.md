@@ -21,13 +21,18 @@ git clone https://github.com/belajarpowershell/kubernetes-lab.git
 # change folder
 cd kubernetes-lab
 
-# copy the `srv` from git folder "kubernetes-lab/" to "/srv" 
+
 # change the script to executable
 chmod +x alpine1-first-run.sh
 
 
 #run the script 
 ./alpine1-first-run.sh
+
+# this script will perform the following
+# 1. copy the `srv` from git folder "kubernetes-lab/" to "/srv" 
+# 2. Install Ansible
+# 3. Download the Ubuntu installer to `/srv/tftp/iso`
 
 # files `kubernetes-lab/srv` folder is now copied to /srv
 # this is important as the files required for the setup must be located at `/srv/`
@@ -36,28 +41,3 @@ chmod +x alpine1-first-run.sh
 
 
 
-
-
-## Folder Structure
-
-- /kubernetes-lab
-    - k3s-lab-setup
-      - The server sequence of setup
-  - scripts
-  - srv/
-      - tftp/
-      - bios
-      - efi64
-    - autoinstall/
-      - add-passphrase.sh
-      - copy-ssh-key.sh
-      - hosts.ini
-    - ansible/
-      - playbook-ansible1
-        - 
-      - playbook-k3s
-        - .kube/
-        - j2/
-
-
-```
