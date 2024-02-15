@@ -216,7 +216,7 @@ nav:
                     - kubernetes-lab-setup/100-alpine1/manual-steps/111-setup-boot-files-part3-pxelinux.cfg.md
                     #- kubernetes-lab-setup/100-alpine1/manual-steps/112-New-single-VM-setup-Ubuntu-autoinstall.md
                     - kubernetes-lab-setup/100-alpine1/manual-steps/113-generate-user-data-multipleVM.md
-          #- kubernetes-lab-setup/100-alpine1/104-Validation.md
+          - kubernetes-lab-setup/100-alpine1/104-Validation.md
       - kubernetes-lab-setup/100-alpine1/113-Install-Ubuntu.md
       - Lightweight Kubernetes Installation:
           - kubernetes-lab-setup/200-kubernetes/200-ReadMe.md

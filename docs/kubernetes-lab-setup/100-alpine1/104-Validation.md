@@ -59,12 +59,14 @@ Success is determined when the Virtual Machine is booted up correctly to the PXE
 
    The NFS  functionality is validated when you setup Ubuntu using the  option `ubuntu-nfs-boot (iso mounted on nfs 1GB of Memory)`
 
-
-
 6. tftp
 
    tftp is very difficult to troubleshoot. The best way is to ensure the configuration is correct. 
 
    When I had issues with tftp , reviewing the tftp related configuration ( i.e. tftp server running and paths correctly configured). If you used the standard configuration without changes you should not have any issues.
 
-7. 
+   If you are presented with the following menu, then tftp is working. 
+
+   When you press enter to select the option and the installation proceeds, then NFS is also working.
+
+![113-06-Ubuntu-PXE-boot-menu](./../screenshots/113-06-Ubuntu-PXE-boot-menu.png)

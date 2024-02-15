@@ -34,7 +34,7 @@ Click on the `Green Play` button, this will execute the script.
 
 The generated files are in the subfolder  `.\autoinstall\`
 
-![114-01-location-of-script](./../../screenshots/114-01-location-of-script.png)
+![113-01-location-of-script](./../../screenshots/113-01-location-of-script.png)
 
 
 
@@ -64,7 +64,7 @@ Validate by browsing `http://192.168.100.1/`
 
 
 
-![114-03-list-autoinstall-in-browser](./../../screenshots\114-03-list-autoinstall-in-browser.png)
+![113-03-list-autoinstall-in-browser](./../../screenshots\113-03-list-autoinstall-in-browser.png)
 
 // To update Video of Script generation and the Ubuntu setup.
 

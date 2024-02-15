@@ -14,7 +14,7 @@ We now have some manual tasks to create the `user-data-mac-address` file for eac
 
 For the following step, the Virtual Machines created must be started once to generate the mac-address.
 
-From PowerShell ISE  open `G:\kubernetes-lab\srv\scripts\hyper-v_Host\get-hyperv-start-stopVM.ps1`
+From PowerShell ISE ( **as Administrator**)  open `G:\kubernetes-lab\srv\scripts\hyper-v_Host\get-hyperv-start-stopVM.ps1`
 
 Click on the `Green Play` button, this will execute the script.
 
@@ -36,7 +36,7 @@ Click on the `Green Play` button, this will execute the script.
 
 The generated files are in the subfolder  `.\autoinstall\`
 
-![114-01-location-of-script](./../screenshots\114-01-location-of-script.png)
+![113-01-location-of-script](./../screenshots\113-01-location-of-script.png)
 
 
 
@@ -48,11 +48,17 @@ This is from the following code
 APPEND netboot=nfs boot=casper root=/dev/nfs nfsroot=192.168.100.1:/srv/isoubuntu autoinstall 
 ```
 
+### Step 3
+
 #### Copy autoinstall files to `alpine1`
 
 Using [WinSCP](https://winscp.net/eng/download.php) copy the files created to the folder  `/srv/autoinstall/` on the `alpine1` server. The duplicate file with the node name is workaround to show the hostname of the specific file. 
 
-![114-02-wsftp-cp-autoinstall](./../screenshots\113-02-wsftp-cp-autoinstall.png)
+1. WinSCP is connected to `alpine1` via IP `192.168.100.1`
+2. Ensure the path to the `user-data-*` files are correct.
+3. The destination path on `alpine1` is equally important.
+
+![113-02-wsftp-cp-autoinstall](./../screenshots\113-02-wsftp-cp-autoinstall.png)
 
 
 
@@ -62,9 +68,53 @@ Validate by browsing `http://192.168.100.1/`
 
 
 
-![114-03-list-autoinstall-in-browser](./../screenshots\114-03-list-autoinstall-in-browser.png)
+![113-03-list-autoinstall-in-browser](./../screenshots\113-03-list-autoinstall-in-browser.png)
 
-// To update Video of Script generation and the Ubuntu setup.
+### Step 4
+
+#### Ubuntu installation
+
+Ubuntu Installation on the Hyper-V Virtual machines can now begin.
+
+1. Connect to  Hyper-V Virtual Machine `loadbalancer`
+
+2. Start Hyper-V Virtual Machine `loadbalancer`
+
+3. If all configuration is correct, the PXE boot menu will be presented.
+    Use the arrow key to highlight the menu option `ubuntu-nfs-boot` and press enter. The Ubuntu Installation will begin. No input required.
+
+![113-06-Ubuntu-PXE-boot-menu](./../screenshots/113-06-Ubuntu-PXE-boot-menu.png)
+
+
+
+### Step 5
+
+#### Connect to `loadbalancer`
+
+The DNS lookup will only work from `alpine1` , if you connect from the Windows PC then you will need to use the IP address of `loadbalancer`
+
+Check connectivity From `alpine1` to the newly installed `Ubuntu`
+
+```
+ping loadbalancer
+```
+
+![113-07-connectivity](./../screenshots/113-07-connectivity.png)
+
+Connect/ssh  to `loadbalancer`
+
+1. Connect from `alpine1`
+2. type `ssh ubuntu@loadbalancer`
+3. Connected to `loadbalancer` as reflected in the IP address.
+4. The login prompt shows the user `ubuntu` logged on to `loadbalancer`
+
+![113-08-connectivity](./../screenshots/113-08-connectivity.png)
+
+
+
+Repeat steps for remaining Hyper-V Virtual Machines.
+
+
 
 
 
