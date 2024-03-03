@@ -1,10 +1,10 @@
 # SSH keys
 
-
+#### What are SSH keys?
 
 When accessing Ubuntu ( or any Linux) servers, you will need to enter the username and password for every SSH session. When performing automated tasks, this can be a challenge.  SSH keys  can be used to improve this process. For our next tool Ansible ssh keys are required.
 
-How SSH keys work?
+#### How SSH keys work?
 
 The concept of SSH keys involve private and public keys. 
 
@@ -47,28 +47,24 @@ Once the key pair is generated, copy the public key to the remote Ubuntu server
 
 The following script copies the ssh public key to the remote servers  `master1 master2 master3 worker1 worker2 worker3 xsinglenode`
 
+This script can be found in
+
+`/srv/ansible/copy-ssh-key.sh`
+
 ```
-#!/bin/sh
+#From /srv/ansible/ on ansible1
+chmod +x copy-ssh-key.sh
 
-# SSH key file , the public key has the `.pub' extension.
-ssh_key="/root/.ssh/ubuntu-k3s-sshkey.pub"
+#Run script 
+./copy-ssh-key.sh
 
-# Perform ssh-keyscan for each server and copy SSH public key
-for server in loadbalancer master1 master2 master3 worker1 worker2 worker3 xsinglenode
-do
-    # Perform ssh-keyscan to gather SSH host key
-    ssh-keyscan "$server" >> ~/.ssh/known_hosts
-
-    # Copy SSH public key to the server
-    # take note the ssh key is associated to the use 'ubuntu' in this example
-    ssh-copy-id -i "$ssh_key" "ubuntu@$server"  
-done
+SSH keys are now copied to the servers.
 
 ```
 
+### #### Passphrase
 
 
-### Passphrase
 
 When connecting using ssh keys, the prompt for the ssh key passphrase will be prompted for each ssh session. You can use the ssh-agent to store this passphrase
 
@@ -103,12 +99,20 @@ ssh-add -l
 
 
 
-Troubleshooting points
+#### Troubleshooting 
 
+1. Each terminal  opened must be setup to use the `ssh-agent`
 1. Ensure only one instance of `ssh-agent` is running. You can run the following to terminate all `ssh-agent` and start a new single instance.
 
-`killall ssh-agent`
+```
+killall ssh-agent
+```
 
-2. Check existing ssh-agent that are running.
-`ps aux | grep ssh`
+2. Check existing ssh-agent that are running. 
+
+  ```
+  ps aux | grep ssh
+  ```
+
+  
 

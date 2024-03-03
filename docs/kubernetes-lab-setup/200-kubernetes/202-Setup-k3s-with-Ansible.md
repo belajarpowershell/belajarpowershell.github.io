@@ -24,13 +24,19 @@ Once the steps are completed , `alpine1` can be configured to connect to the `k3
 
 Once the scripts `02z-k3s-copy-kubeconfig.yml` and `03z-k3s-copy-kubeconfig-single.yml` are completed. The playbook copy the remote kubeconfig files from the remote servers . The files will be stored in `/root/.kube/clusters`  folder. 
 
+The ansible script `k3s-complete-setup.yml ` will also copy the `KUBECONFIG` files to `alpine` and update `~/.kube/config`  to list the clusters. 
+
+
+
  We now need to have the KUBECONFIG setup on `alpine` . The following will merge all `*.yaml` files in `/root/.kube/clusters`
+
+To manually setup the `KUBECONFIG` run this script.
 
 ```
  export KUBECONFIG=$(for YAML in $(find ${HOME}/.kube/clusters -name '*.yaml') ; do echo -n ":${YAML}"; done)
 ```
 
-This is not permanent . Do check how you can make this permanent after logout from the session. 
+
 
 #### `kubectl` basic commands
 
