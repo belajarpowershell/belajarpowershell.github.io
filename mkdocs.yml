@@ -186,10 +186,13 @@ plugins:
 # home_button2_blurb: |         # Short description of this button / section.
 #   This goober navigates to some important thingies located in "/Folder2/index.md"
 nav:
+  # - Section:
+  #   - kubernetes-lab-setup/100-alpine1/manual-steps/101-DHCP-server.md
+  #   - Page 1: index.md
   - Kubernetes Lab Setup:
       - index.md
       #- ReadMe.md
-      - Prerequisites:
+      - High level Design: 
           - kubernetes-lab-setup/000-Prerequisites/001-Hyper-V-Host-Specification.md
           - kubernetes-lab-setup/000-Prerequisites/002-High-Level-node-setup.md
           - kubernetes-lab-setup/000-Prerequisites/002-vi-basics.md
@@ -202,7 +205,9 @@ nav:
           - kubernetes-lab-setup/100-alpine1/102-Clone-repository.md
           #- kubernetes-lab-setup/100-alpine1/103-setup-using-ansible-manual.md
           - kubernetes-lab-setup/100-alpine1/103-setup-using-ansible.md
-          - Setup services Manual Steps:
+          
+          - The manual steps [alpine1 services]:
+                    - Readme First:  kubernetes-lab-setup/100-alpine1/manual-steps/readme.md
                     - kubernetes-lab-setup/100-alpine1/manual-steps/101-DHCP-server.md
                     - kubernetes-lab-setup/100-alpine1/manual-steps/102-setup-router.md
                     - kubernetes-lab-setup/100-alpine1/manual-steps/103-setup-dns.md
@@ -216,20 +221,21 @@ nav:
                     - kubernetes-lab-setup/100-alpine1/manual-steps/111-setup-boot-files-part3-pxelinux.cfg.md
                     #- kubernetes-lab-setup/100-alpine1/manual-steps/112-New-single-VM-setup-Ubuntu-autoinstall.md
                     - kubernetes-lab-setup/100-alpine1/manual-steps/113-generate-user-data-multipleVM.md
-          - kubernetes-lab-setup/100-alpine1/104-Validation.md
-      - kubernetes-lab-setup/100-alpine1/113-Install-Ubuntu.md
-      - Lightweight Kubernetes Installation:
-          - kubernetes-lab-setup/200-kubernetes/200-ReadMe.md
-          - kubernetes-lab-setup/200-kubernetes/201-SSH-keys-setup.md
-          - kubernetes-lab-setup/200-kubernetes/202-Setup-k3s-with-Ansible.md
-          - kubernetes-lab-setup/200-kubernetes/204-k3s-setup-complete.md
-          - Manual Steps:
-
-            - kubernetes-lab-setup/200-kubernetes/manual-steps/202-Ansible-inventory.md
-            - kubernetes-lab-setup/200-kubernetes/manual-steps/203-Setup-k3s-with-Ansible.md
-            # - 900-Explainers/PXELINUX.md
-            # - 900-Explainers/generate-user-data-multipleVM.md
-            # - 900-Explainers/generate-user-data-reference.md
+                    - kubernetes-lab-setup/100-alpine1/104-Validation.md
+          - Ubuntu installation :
+                    - kubernetes-lab-setup/100-alpine1/113-Install-Ubuntu.md
+          - k3s Lightweight Kubernetes Installation:
+                - kubernetes-lab-setup/200-kubernetes/200-ReadMe.md
+                - kubernetes-lab-setup/200-kubernetes/201-SSH-keys-setup.md
+                - kubernetes-lab-setup/200-kubernetes/202-Setup-k3s-with-Ansible.md
+                - kubernetes-lab-setup/200-kubernetes/204-k3s-setup-complete.md
+          # - Manual Steps:
+          #   - kubernetes-lab-setup/200-kubernetes/manual-steps/202-Ansible-inventory.md
+          #   - kubernetes-lab-setup/200-kubernetes/manual-steps/203-Setup-k3s-with-Ansible.md
+          #   # - 900-Explainers/PXELINUX.md
+          #   # - 900-Explainers/generate-user-data-multipleVM.md
+          #   # - 900-Explainers/generate-user-data-reference.md
+# new section
   - belajarpowershell\BelajarPowerShell.md
 
 

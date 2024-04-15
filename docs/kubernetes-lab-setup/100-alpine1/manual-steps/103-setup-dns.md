@@ -70,6 +70,10 @@ worker1         IN      A       192.168.100.205
 worker2         IN      A       192.168.100.206
 worker3         IN      A       192.168.100.207
 xsinglenode     IN      A       192.168.100.199
+apple           IN      A       192.168.100.208
+banana          IN      A       192.168.100.208
+argocd          IN      A       192.168.100.208
+longhorn          IN      A       192.168.100.208
 
 ```
 

@@ -15,9 +15,12 @@ This lab setup does not go into the Kubernetes direclty, but with this setup tes
 ## Prerequisites
 
 In order to understand the steps in Kubernetes Lab Setup, the following knowledge is required.
-* Basic Linux knowledge - You should be able to connect and navigate a Linux environment.
-* Basic Hyper-V - Be able to enable Hyper-V and be familiar with the steps to create Virtual Machines
-* PowerShell - Be able to use PowerShell ISE.
+
+- Basic Linux knowledge - You should be able to connect and navigate a Linux environment.
+
+- Basic Hyper-V - Be able to enable Hyper-V and be familiar with the steps to create Virtual Machines
+
+- PowerShell - Be able to use PowerShell ISE.
 
 
 ## How to use Kubernetes Lab Setup ?
