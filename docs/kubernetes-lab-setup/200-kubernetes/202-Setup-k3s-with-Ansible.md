@@ -21,11 +21,20 @@ Do repeat the ansible command if there are any errors. The script should not ret
 Once the above update the  DNS resolver to use `192.168.100.1`
 
 ```
+
 #on alpine1 only.
-vi /etc/resolve
+#disables readonly
+chattr -i /etc/resolv.conf 
+
+vi /etc/resolv.conf 
+# remove references to other entries like 8.8.8.8
 
 nameserver 192.168.100.1
 search k8s.lab
+
+#make file readonly
+chattr +i /etc/resolv.conf 
+
 
 #in my case the every time the alpine1 is rebooted the values in this file get reset.
 # as such the following is to set the immutable flag 
