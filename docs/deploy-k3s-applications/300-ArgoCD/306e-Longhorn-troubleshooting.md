@@ -1,3 +1,7 @@
+# Commands used in troubleshooting.
+
+
+
 ```
 
 kubectl get engineimage -n longhorn-system -o yaml
@@ -14,20 +18,12 @@ List all elements in longhorn ns
 kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl get --show-kind --ignore-not-found -n longhorn-system
 ```
 
-
-
-
-
 ```
 deploy temp pod to create pvc
 
 kubectl create -f https://raw.githubusercontent.com/longhorn/longhorn/v1.5.3/examples/pod_with_pvc.yaml
 
 ```
-
-
-
-
 
 #### This PVC creation is succesful.
 

@@ -1,3 +1,6 @@
+# Storage addition
+
+ With Storage there will be a number of scenarios where you will have to add storage size.
 
 #### Add new disk (10GB) and increase `/longhorn_data`
 
@@ -58,7 +61,6 @@
    
    
    
-
 3.  `lsblk` will show sdc-sdc1 created with 10G
 
    

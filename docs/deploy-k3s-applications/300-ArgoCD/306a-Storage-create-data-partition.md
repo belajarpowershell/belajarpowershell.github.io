@@ -1,16 +1,34 @@
+# Storage driver Longhorn.
+
+The next application to deploy will be the Storage Driver. For High Availability clusters you want to have the storage to be hosted on multiple nodes. The default Kubernetes behavior is to store locally on the worker nodes. If the worker node fails ,the data stored on this node will not be available.
 
 
-#### Pre deployment steps
+
+[Longhorn](https://longhorn.io/) is a storage driver that can provide multiple replicas of the storage. If a node goes offline the replica hosted on another node is made available.
+
+In order to have a consistent deployment, the worker nodes must be partitioned and ready to be used by Longhorn.
+
+Here is a summary of the actions
+
+1. Create a partition on each of the worker nodes that can be used by Longhorn. 
+2. The partition is mounted as `/longhorn_data` . It can be any name if you choose to.
+3. The Partition is created as a Volume Group. 
+
+
+
+
+
+#### Longhorn pre deployment steps - create partition and mount point
 
 Create the mount points on the worker nodes and mount it for use.
 
 the volume mount name must be same across Worker the nodes. The is a minimum size for storage .
 
-
+This website has provided a good visual on the Linux Storage.
 
 https://packetpushers.net/blog/ubuntu-extend-your-default-lvm-space/
 
-![LVM high level ](https://packetpushers.net/wp-content/uploads/2021/11/1-linux-ubuntu-lvm-diagram.jpg)
+![LVM high level ](../screenshots/1-linux-ubuntu-lvm-diagram.jpg)
 
 #### Create LVM group
 
@@ -65,11 +83,10 @@ To create a Logical Volume using LVM (Logical Volume Management) on Ubuntu, you'
 
    ```
    sudo vgcreate longhorn_vg /dev/sdb1
-   
    ```
    
    Replace `my_vg` with the desired name for your volume group.
-
+   
 4. **Create Logical Volume (LV)**:
    Once the volume group is created, you can create logical volumes within it. Use the `lvcreate` command:
 
@@ -125,5 +142,4 @@ To create a Logical Volume using LVM (Logical Volume Management) on Ubuntu, you'
    ```
 
 That's it! You've created a logical volume using LVM on Ubuntu. You can now use the logical volume like any other disk partition, and it will benefit from the flexibility and management features provided by LVM.
-
 

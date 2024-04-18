@@ -14,6 +14,31 @@ execute the playbook run from `/srv/ansible/playbook-k3s/`
 ansible-playbook k3s-complete-setup.yml  --user ubuntu --ask-become-pass  -i hosts.ini
 ```
 
+Do repeat the ansible command if there are any errors. The script should not return any errors.
+
+
+
+Once the above update the  DNS resolver to use `192.168.100.1`
+
+```
+#on alpine1 only.
+vi /etc/resolve
+
+nameserver 192.168.100.1
+search k8s.lab
+
+#in my case the every time the alpine1 is rebooted the values in this file get reset.
+# as such the following is to set the immutable flag 
+
+#enables readonly
+chattr +i /etc/resolv.conf 
+
+#disables readonly
+chattr -i /etc/resolv.conf 
+```
+
+
+
 
 
 Once the steps are completed , `alpine1` can be configured to connect to the `k3s` clusters. 

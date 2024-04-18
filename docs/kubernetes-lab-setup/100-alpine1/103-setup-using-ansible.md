@@ -22,6 +22,4 @@ ansible-playbook alpine-services.yaml
 
 
 
-Once the scripts are completed the following would have been setup
-
-1. 
+Once the scripts are completed the following would have been setup.

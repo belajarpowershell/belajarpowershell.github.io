@@ -1,5 +1,10 @@
+# Storage expansion 
 
-#### expand  partion to 10GB  and increase `/longhorn_data`
+With Storage there will be a number of scenarios where you will have to expand the storage size.
+
+
+
+#### Expand  partition to 10GB  and increase `/longhorn_data`
 
 1. Use `cfdisk` to increase partition size
 
@@ -20,8 +25,6 @@
      /dev/sda3  ubuntu-vg   lvm2 a--  <46.95g   23.47g
      /dev/sdb1  longhorn_vg lvm2 a--   <3.00g 1020.00m
    ```
-
-   
 
 3. Resize the PV `/dev/sdb1`
 

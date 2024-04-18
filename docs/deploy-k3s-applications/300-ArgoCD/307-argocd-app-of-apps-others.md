@@ -1,8 +1,21 @@
 
 
+# More examples on `app-of-app`
 
+In this example Prometheus is deployed using `app-of-apps` . This slightly different as the Promethues has a Persistent storage requirement. 
+
+Kubernetes pods are by design temporary, when the pod is deleted all data is also lost. 
+
+If the data is required to be maintained persistent storage is required. This is where Longhorn's role steps in.
+
+
+
+
+
+#### Step 1 download helm chart
 
 ```
+
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
 

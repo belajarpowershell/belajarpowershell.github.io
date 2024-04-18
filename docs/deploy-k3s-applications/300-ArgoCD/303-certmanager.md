@@ -1,6 +1,6 @@
 
 
-## cert-manager and Private CA 
+## Cert-manager and Private CA 
 
 #### Deploy cert-manager
 
@@ -27,11 +27,14 @@ helm install my-cert-manager -f cert-manager-v1.14.4/values.yaml jetstack/cert-m
 #### install from local helm charts. 
 ```
 # download Helm Chart
+
+helm repo add jetstack https://charts.jetstack.io
+helm repo update
+
 helm pull   jetstack/cert-manager --version 1.14.4
 
 # extract Helm chart locally
-mkdir cert-manager-v1.14.4
-tar -xvf cert-manager-v1.14.4.tgz --strip-components=1 -C \cert-manager-v1.14.4
+mkdir cert-manager-v1.14.4 && tar -xvf cert-manager-v1.14.4.tgz --strip-components=1 -C \cert-manager-v1.14.4
 
 # install Helm chart 
 helm install cert-manager ./cert-manager-v1.14.4 -f ./cert-manager-v1.14.4/values.yaml --namespace cert-manager --create-namespace --set installCRDs=true
@@ -60,9 +63,13 @@ helm uninstall my-cert-manager  -n cert-manager
 
 `Nb : use namespace cert-manager`
 
-Once the certmanager is installed. 
+`cert-manager` is now installed. 
 
-Create a CA ( self signed Certificate Authority)
+To configure `cert-manager`  a certificate authority is required. In production networks you can use  providers like `lets-encrypt`  but that added complexity as you will need a valid domain name . As this lab is to test deployments we can use self signed certificates. They function just as a public CA but they are not recognized by the web browsers.
+
+
+
+#### Create a CA ( self signed Certificate Authority)
 
 
 
@@ -144,11 +151,7 @@ argocd      argocd-server   True    argocd-server-tls   13m
 
 
 
-
-
-
-
-Summary.
+#### Summary.
 
 This example uses a Private CA to generate certs for the domain `k8s.lab`
 
@@ -167,9 +170,4 @@ The steps:
 That's all the steps required to create a Private CA issuer.
 
 
-
-```
-
-
-```
 
