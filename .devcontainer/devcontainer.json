@@ -2,5 +2,6 @@
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "forwardPorts": [3000],
   "features": {
+    "ghcr.io/devcontainers-contrib/features/mkdocs:2": {}
   }
 }
