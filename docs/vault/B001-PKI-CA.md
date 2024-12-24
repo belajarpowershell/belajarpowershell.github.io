@@ -1,5 +1,6 @@
 https://developer.hashicorp.com/vault/tutorials/pki/pki-engine?variants=vault-deploy%3Aselfhosted
 
+##  Step 1: generate root CA
 Enable PKI
 
 ```
@@ -59,7 +60,7 @@ vault write pki/config/urls `
 
 
 
-Step 2 generate Intermediate CA
+## Step 2 generate Intermediate CA
 
 
 
