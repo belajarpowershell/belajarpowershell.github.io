@@ -238,7 +238,7 @@ nav:
 # new section
   - Deploying Kubernetes applications: deploy-k3s-applications/readme.md 
 # - applications\BelajarPowerShell.md
-  - HashiCorp Vault - Selfnotes: vault/index.md
+  - HashiCorp Vault - Selfnotes: vault/readme.md
       - vault/A001-Vault-notes -initial-setup.md
       - vault/A002-Azure-vault-prereq.md
       - vault/A003-Vault-notes-Vault-azure-Initial-setup.md
