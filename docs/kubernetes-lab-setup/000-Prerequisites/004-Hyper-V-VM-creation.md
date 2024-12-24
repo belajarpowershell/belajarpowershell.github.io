@@ -49,7 +49,7 @@ To use this script:-
 
 // method to access Video-- QR code?
 
-[Here is a video that might help](https://clipchamp.com/watch/EYzyfDZUGRv)
+[Here is a video that might help](https://www.youtube.com/watch?v=APxQZcSFQuo)
 
 
 

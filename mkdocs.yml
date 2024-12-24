@@ -198,32 +198,33 @@ nav:
           - kubernetes-lab-setup/000-Prerequisites/002-vi-basics.md
           - kubernetes-lab-setup/000-Prerequisites/003-clone-repository.md
           - kubernetes-lab-setup/000-Prerequisites/004-Hyper-V-VM-creation.md
-      - Management Server alpine1 setup:
+      - Management Server install alpine1:
           - kubernetes-lab-setup/100-alpine1/100-alpine1-setup.md
           #- kubernetes-lab-setup/100-alpine1/1000-Clone-repository (copy).md
           - kubernetes-lab-setup/100-alpine1/101-ssh-to-alpine1.md
           - kubernetes-lab-setup/100-alpine1/102-Clone-repository.md
           #- kubernetes-lab-setup/100-alpine1/103-setup-using-ansible-manual.md
           - kubernetes-lab-setup/100-alpine1/103-setup-using-ansible.md
-          
-          - The manual steps [alpine1 services]:
-                    - Readme First:  kubernetes-lab-setup/100-alpine1/manual-steps/readme.md
-                    - kubernetes-lab-setup/100-alpine1/manual-steps/101-DHCP-server.md
-                    - kubernetes-lab-setup/100-alpine1/manual-steps/102-setup-router.md
-                    - kubernetes-lab-setup/100-alpine1/manual-steps/103-setup-dns.md
-                    - kubernetes-lab-setup/100-alpine1/manual-steps/104-setup-nginx.md
-                    - kubernetes-lab-setup/100-alpine1/manual-steps/105-nfs.md
-                    - kubernetes-lab-setup/100-alpine1/manual-steps/106-tftp.md
-                    - kubernetes-lab-setup/100-alpine1/manual-steps/107-cloud-init.md
-                    - kubernetes-lab-setup/100-alpine1/manual-steps/108-DHCP-for-PXE.md
-                    - kubernetes-lab-setup/100-alpine1/manual-steps/109-setup-boot-files-part1-PXE.md
-                    - kubernetes-lab-setup/100-alpine1/manual-steps/110-setup-boot-files-part2-OS.md
-                    - kubernetes-lab-setup/100-alpine1/manual-steps/111-setup-boot-files-part3-pxelinux.cfg.md
-                    #- kubernetes-lab-setup/100-alpine1/manual-steps/112-New-single-VM-setup-Ubuntu-autoinstall.md
-                    - kubernetes-lab-setup/100-alpine1/manual-steps/113-generate-user-data-multipleVM.md
-                    - kubernetes-lab-setup/100-alpine1/104-Validation.md
+          - Manual steps to install alpine1:
+                        - Readme First:  kubernetes-lab-setup/100-alpine1/manual-steps/readme.md
+                        - kubernetes-lab-setup/100-alpine1/manual-steps/101-DHCP-server.md
+                        - kubernetes-lab-setup/100-alpine1/manual-steps/102-setup-router.md
+                        - kubernetes-lab-setup/100-alpine1/manual-steps/103-setup-dns.md
+                        - kubernetes-lab-setup/100-alpine1/manual-steps/104-setup-nginx.md
+                        - kubernetes-lab-setup/100-alpine1/manual-steps/105-nfs.md
+                        - kubernetes-lab-setup/100-alpine1/manual-steps/106-tftp.md
+                        - kubernetes-lab-setup/100-alpine1/manual-steps/107-cloud-init.md
+                        - kubernetes-lab-setup/100-alpine1/manual-steps/108-DHCP-for-PXE.md
+                        - kubernetes-lab-setup/100-alpine1/manual-steps/109-setup-boot-files-part1-PXE.md
+                        - kubernetes-lab-setup/100-alpine1/manual-steps/110-setup-boot-files-part2-OS.md
+                        - kubernetes-lab-setup/100-alpine1/manual-steps/111-setup-boot-files-part3-pxelinux.cfg.md
+                        #- kubernetes-lab-setup/100-alpine1/manual-steps/112-New-single-VM-setup-Ubuntu-autoinstall.md
+                        - kubernetes-lab-setup/100-alpine1/manual-steps/113-generate-user-data-multipleVM.md
+                        - kubernetes-lab-setup/100-alpine1/104-Validation.md
+      - Install Ubuntu on VM's created:
           - Ubuntu installation :
                     - kubernetes-lab-setup/100-alpine1/113-Install-Ubuntu.md
+      - k3s installation:
           - k3s Lightweight Kubernetes Installation:
                 - kubernetes-lab-setup/200-kubernetes/200-ReadMe.md
                 - kubernetes-lab-setup/200-kubernetes/201-SSH-keys-setup.md
