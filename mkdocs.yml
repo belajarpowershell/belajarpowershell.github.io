@@ -246,7 +246,7 @@ nav:
         - vault/A003-Vault-notes-Vault-azure-Initial-setup.md
         - vault/A004-Vault-notes-Vault-azure-generate-SP.md
         - vault/A005-Vault-Policies.md
-        - vaul/B001-PKI-CA.md
+        - vault/B001-PKI-CA.md
         - vault/D001-Vault-common-commands.md
         - vault/zzz-additional-info-001.md
         - vault/zzz-additional-info-002 -all-vault-config.md
