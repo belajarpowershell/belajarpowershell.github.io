@@ -238,6 +238,7 @@ nav:
 # new section
   - Deploying Kubernetes applications: deploy-k3s-applications/readme.md 
 # - applications\BelajarPowerShell.md
+  - HashiCorp Vault - Selfnotes: vault/readme.d
 
 
 
